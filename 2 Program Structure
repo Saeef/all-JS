@@ -1,1 +1,109 @@
+EXPRESSION AND STATEMENTS
+=========================
 
+  +   A FRACTION OF CODE THAT PRODUCES A VALUE IS CALLED AN EXPRESSION
+        EX.
+          22 OR 'hello'   => ARE EXPRESSIONS
+          
+  +   STATEMENT STANDS ON ITW OWN AMOUNT TO SOMETHING
+        EX.
+          var caught = 5 * 5;
+          
+ +    A FUNCTION IS A PIECE OF PROGRAM WRAPPED IN A VALUE
+      EX.
+        +   alert('Good morning);
+        +   prompt('What is your name');
+        +   confirm('is that ok?');
+        
+        +   EXECUTIONG A FUNCTION IS CALLED INVOKING, CALLING, OR APPLYING
+        +   VALUES GIVEN TO FUNCTIONS ARE CALLED ARGUMENTS.
+        
+        
+        *Math.max
+        console.log(Math.max(2,5));
+        //  => 5
+        
+        
+        EX.
+          var number = Number(prompt('Enter a number'));
+          if (!isNaN(number))
+            alert('Your number is the square root of ' + number*number);
+          else
+            alert('whats wrong with u?');
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
