@@ -53,25 +53,39 @@ UNARY OPERATORS
 BOOLEAN VALUES
 ==============
 
+     +    THEY HAVE TWO VALUES : TRUE AND FALSE   
+               EX. 
+                    console.log( 3 > 2);
+                    // -> true
+          
+          +    STRINGS CAN BE COMPARED AS WELL
+               "Z" < "a" is true
+                    +    UPPERCASE LETTERS ARE ALWAYS LESS THAN LOWERCASE ONES
+                    
+     +    THERE IS ONLY ONE VALUE IN JAVASCRIPT THAT IS NOT EQUAL TO ITSELF => NaN
+               EX.
+                    console.log(NaN == NaN)
+                    // =>     false
+                    
 
+LOGICAL OPERATORS
+=================
 
+     THESE ARE OPERATORS THAT CAN BE APPLIED TO BOOLEANS: AND, OR AND NOT
+          +    &&   TRUE IF BOTH VALUES ARE TRUE
+          +    ||   IT PRODUCES TRUE IF EITHER OF THE VALUES IS TRUE
+          +    !    IT'S A UNARY OPERATOR THAT FLIPS THE VALUE GIVEN TO IT
+          +    TERNARY OPERATOR (CONDITIONAL OPERATOR)
+                    * THE VALUE ON THE LEFT OF QUESTION MARK PICKS WHICH OF THE OTHER TWO VALUE WILL COME OUT.
+                      IF TRUE ONE ON LEFT AND IS FALSE THE ONE ON RIGHT
+                      EX.
+                         console.log(true ? 1 : 2);
+                         // -> 1
 
+UNDEFINED VALUES
+================
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+     +    TWO VALUES: NULL AND UNDEFINED
 
 
 
