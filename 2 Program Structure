@@ -30,14 +30,48 @@ EXPRESSION AND STATEMENTS
             alert('Your number is the square root of ' + number*number);
           else
             alert('whats wrong with u?');
-            
+  
+  
+  WHILE AND DO LOOPS
+  ==================
+  
+    +   EX
+           var number = 0;
+           while (number <=12) {
+              console.log(number);
+           }
+           
+           
+    +   EX.
+            var result = 1;
+            var counter = 0;
+            while(counter < 10) {
+              result = result *2;
+              counter = counter + 1;
+            }
+            console.log(result);
+            // -> 1024
         
         
+  FOR LOOPS
+  =========
+  
+    +   EX.
+            for ( var number = 0;  number <= 12;  number ++) {
+              console.log(number);
+            }
         
         
-        
-        
-        
+  SINGLE LINE COMMENTS
+  =====================
+      EX.   // comment here
+  
+  MULTIPLE LINE COMMENTS
+  =======================
+      EX.   /*
+            This is also a comment
+            more goes here
+            */  
         
         
         
