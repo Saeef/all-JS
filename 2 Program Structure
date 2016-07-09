@@ -149,7 +149,7 @@ EXPRESSION AND STATEMENTS
               }
               
               for( var i = 0; i < size/2; i++) {
-                  //populates board with my two rows
+                  //populates board with my two rows from above
                   console.log(total);
                   console.log(tbottom);
               
