@@ -76,7 +76,46 @@ EXPRESSION AND STATEMENTS
         
         
         
+  EXERCISES  (WARM UP CHAPTERS)
+  =========
+  
+    + TRIANGLE MADE OF POUND SIGNS USING LOOP  (IT WORKS WHATEVER)
+    
+        var triangle ="#";
+        var count = 0;
         
+        while (count < 7) {
+            triangle = triangle + '#';
+            var see =  triangle.charAt(0);
+        
+            if ( (triangle.charAt(0) == "#") && (count > 0) ) {
+                 //not doing anything right now
+        
+            } elsvar triangle ="#";
+        var count = 0;
+        
+        while (count < 7) {
+            triangle = triangle + '#';
+            var see =  triangle.charAt(0);
+        
+            if ( (triangle.charAt(0) == "#") && (count > 0) ) {
+                 //not doing anything right now
+        
+            } else if (triangle == "##" && count == 0) {
+                //removes first character
+                triangle = triangle.substr(0,1);
+        
+            }
+            console.log(triangle);
+            count ++;
+        }e if (triangle == "##" && count == 0) {
+                //removes first character
+                triangle = triangle.substr(0,1);
+        
+            }
+            console.log(triangle);
+            count ++;
+        }
         
         
         
