@@ -58,7 +58,9 @@ CLOSURE
         console.log(one(5));
     
     
-    
+RECURSION
+=========
+        A FUNCTION THAT CALLS ITSELF IS CALLED RECURSIVE
     
     
     
