@@ -63,7 +63,22 @@ RECURSION
         A FUNCTION THAT CALLS ITSELF IS CALLED RECURSIVE
     
     
-    
+ EXERCISES
+ =========
+ 
+            EX.
+                //write a function that takes 2 arguments and returns their minimum
+                // stil too easy
+                    function min(x,y) {
+                        if (x < y) {
+                            return x;
+                        } else {
+                            return y;
+                        }
+                    }
+                    
+                    console.log(min(44,12));
+
     
     
     
