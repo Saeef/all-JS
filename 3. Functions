@@ -81,9 +81,27 @@ RECURSION
 
     
     
+    EX- BEAN COUNTING LAST ONE - STILL PRETTY EASY
     
-    
-    
+                //write a function countBs that takes a string as its only argument and returns a number
+                //that indicates how many uppercase "B" characters are in the string
+                
+                function countBs(string, countwhat) {
+                
+                        var findIt = String(countwhat);
+                        var letters = 0;
+                        for (var i=0; i < string.length; i++) {
+                            if (string.charAt(i) == findIt) {
+                                letters += 1;
+                            }
+                
+                        }
+                        console.log("There are " + letters + " " + findIt + "(s) on: \n\n" + "'" + string + "'");
+                
+                }
+                
+                countBs("Boy what a day Bye", "B");
+                    
     
     
     
