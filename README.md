@@ -1,1 +1,1 @@
-## elJS notes and my new snippets lib
+## elJS notes and my new JS snippets lib
