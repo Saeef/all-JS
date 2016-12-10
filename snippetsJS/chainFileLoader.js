@@ -7,20 +7,12 @@ when the previous one including dependencies have already been loaded.
 
 ----------------------------------------------------------- */
 
-// Example
-
-// Here shows how to load jQuery and only once its fully loaded 
-// will load jQuery UI, and when that's done “myscript.js”.
-
-
-scriptLoader.load([
-
-    'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js',
-    'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js',
-    'js/myscript.js'
+// Example files on bottom or you'll get a bunch of undefines. 
+// Declares and sets scriptLoader var. Then makes sure scriptLoader.load method exists
+// Files:
+// You need to call External JS files first  &check; &#10003;
 
 
-]);
 
 
 var scriptLoader = {
@@ -77,3 +69,22 @@ var scriptLoader = {
     }//load
 
 }//scriptLoader
+
+
+
+// Example
+
+// Here shows how to load jQuery and only once its fully loaded 
+// will load jQuery UI, and when that's done “myscript.js”.
+
+
+scriptLoader.load([
+
+    'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js',
+    'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js',
+    'js/myscript.js'
+
+
+]);
+
+
