@@ -5,7 +5,7 @@ This object is useful when you want to load external javascript files only after
 Sort of in a chainable js lib - where every new file will be loaded only 
 when the previous one including dependencies have already been loaded.
 
------------------------------------------------------------ */
+------------------------------------------------------------- */
 
 // Example files on bottom or you'll get a bunch of undefines. 
 // Declares and sets scriptLoader var. Then makes sure scriptLoader.load method exists
@@ -72,10 +72,14 @@ var scriptLoader = {
 
 
 
-// Example
+/*
+--------------------------------------------------------------
+Example
 
-// Here shows how to load jQuery and only once its fully loaded 
-// will load jQuery UI, and when that's done “myscript.js”.
+Here shows how to load jQuery and only once its fully loaded 
+will load jQuery UI, and when that's done “myscript.js”.
+
+------------------------------------------------------------- */
 
 
 scriptLoader.load([
