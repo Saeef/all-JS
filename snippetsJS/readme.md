@@ -5,7 +5,7 @@
 <br />
   
  nanoProgressBar
- ![nanoProgressBar](nanoProgressBar.png?raw=true "mobile" target="_blank")
+ ![nanoProgressBar](images/nanoProgressBar.png?raw=true "mobile" target="_blank")
 
 
 
@@ -15,4 +15,4 @@
 <br />
   
  progressBar
- ![progressBar](progressBar.png?raw=true "mobile" target="_blank")
+ ![progressBar](images/progressBar.png?raw=true "mobile" target="_blank")
