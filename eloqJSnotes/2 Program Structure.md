@@ -35,14 +35,14 @@ EXPRESSION AND STATEMENTS
   WHILE AND DO LOOPS
   ==================
   
-    +   EX
+  +   EX
            var number = 0;
            while (number <=12) {
               console.log(number);
            }
            
            
-    +   EX.
+  +   EX.
             var result = 1;
             var counter = 0;
             while(counter < 10) {
@@ -53,8 +53,8 @@ EXPRESSION AND STATEMENTS
             // -> 1024
         
         
-  FOR LOOPS
-  =========
+###  FOR LOOPS
+ 
   
     +   EX.
             for ( var number = 0;  number <= 12;  number ++) {
