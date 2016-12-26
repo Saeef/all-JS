@@ -1,5 +1,5 @@
 ### Long-term Objective: 
-To build a comprehensive sample-based JavaScript cheat sheet - for every method, property, primitive type, object, or built-in function included -ie: a dynamic/responsive periodic table of JS page.
+To build a comprehensive sample-based JavaScript cheat sheet - for every method, property, primitive type, object, or built-in function included -ie: a dynamic/responsive JS periodic table page 
 
 <hr />  
 <br />
