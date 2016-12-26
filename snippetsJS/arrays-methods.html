@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Check whether Number is Even or Odd</title>
+    <style>
+        
+        h1 {
+            font-size: 28px;
+            font-weight: normal;
+            line-height: 38px;
+            text-decoration: underline;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: normal;
+            line-height: 32px;
+            letter-spacing: 0px;
+            text-align: center;
+
+        }
+
+
+
+        .container1 {
+            width: 900px;
+            margin: 0 auto;
+            min-height: 150px;
+            padding: 1em;
+
+        }
+
+        .container2 {
+            width: 900px;
+            margin: 0 auto;
+            min-height: 60px;
+            vertical-align: middle;
+            line-height: 60px;
+
+        }
+
+        input[type=number] {
+            border: 1px solid #333;
+            display: inline-block;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+            padding: 9px 18px;
+        }
+
+        label {
+            display: inline-block;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        button {
+            margin-left: 15px;
+            padding: 10px 20px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+
+        th {
+
+            font-size: 22px;
+            line-height: 36px;
+            color: #b62a00;
+            padding: .3em .5em;
+            font-weight: 500;
+            border-bottom: 2px solid #7f96ab;
+            border-top: 2px solid #7f96ab;
+        }
+
+        td {
+
+            font-size: 18px;
+            line-height: 36px;
+            color: #1d1816;
+            padding: .3em .5em;
+            background: #f7f7f7;
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="container1">
+    <h1>The Array Show</h1>
+    <h3>[dotNotation], push, unshift, splice</h3>
+</div>
+
+<div class="container2">
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#f0f8ff"
+            style="background:#f0f8ff;  border-radius:4px; border-left: 2px solid #7f96ab;
+            border-right: 2px solid #7f96ab; border-bottom: 2px solid #7f96ab;">
+        <tr>
+            <th width="200" align="left">Access (dotNotation)</th>
+
+        </tr> <!-- end of tr heading   -->
+
+
+        <tr>
+            <td>Ex: var fruits = ['apples', 'carrots', 'potatoes', 'pears']; <br />
+
+                > fruits[0] <br/>
+                > 'apples'   &nbsp;  &nbsp;     //enough said
+
+
+
+
+
+            </td>
+        </tr> <!-- end of row 1   -->
+
+
+        <tr>
+            <th width="200" align="left">Add (push, unshift)</th>
+
+        </tr> <!-- end of tr heading   -->
+
+
+        <tr>
+            <td>
+               > fruits.push('banana'); <br />
+               > 5  &nbsp; &nbsp;     //adds banana to the end of array <br />
+
+
+               > fruits.unshift('oranges'); &nbsp; &nbsp;     //add to the beginning of array <br />
+               > 4 &nbsp; &nbsp;     //returns array length
+
+
+            </td>
+        </tr> <!-- end of row 1   -->
+
+
+        <tr>
+            <th width="200" align="left">Splice</th>
+
+        </tr> <!-- end of tr heading   -->
+
+
+        <tr>
+            <td>
+                > fruits = ['apples', 'oranges', 'pears'];<br />
+                &nbsp;  //Insert at index 1 a new element  <br />
+                > fruits.splice('1','0','blueberries'); &nbsp; //1 position,0 nothing to removed
+                > [] <br />
+                > fruits; <br />
+                > ['apples', 'blueberries', 'oranges', 'pears'] <br /><br />
+
+                // remove pears with slice method <br />
+                > fruits.splice(3,1);<br />
+                > ["pears"]; <br />
+                > fruits; <br />
+                > ['apples', 'carrots', 'potatoes'] <br /> <br />
+
+                // remove an element and replace it with another one <br />
+                // remove potatoes and replace it with avocato <br />
+                > fruits.splice(2,1,'avocato');
+                > 'potatoes'  &nbsp; &nbsp; //returns removed elem <br />
+                > fruits <br />
+                > ['apples', 'carrots', 'avocato']
+
+
+
+            </td>
+        </tr> <!-- end of row 1   -->
+
+
+        <tr>
+            <th width="200" align="left">indexOf, pop(), shift()</th>
+
+        </tr> <!-- end of tr heading   -->
+
+
+        <tr>
+            <td>
+                > fruits = ["bananas", "apples", "oranges" "lemons"];<br />
+
+                > fruits.indexOf("bananas"); &nbsp; &nbsp; //returns index position <br />
+                > 0 <br />
+                // remove the last element from an array
+
+                > fruits.pop(); <br />
+                > "lemons" <br />
+                > fruits; <br />
+                > ["bananas", "apples", "oranges"] <br /> <br />
+
+                // remove first element from array <br />
+                > fruits.shift(); <br />
+                > "bananas" <br />
+                > fruits; <br />
+                > ["apples, "oranges"] <br />
+
+
+
+
+
+
+            </td>
+        </tr> <!-- end of row 1   -->
+
+
+
+
+
+
+
+
+
+    </table>
+</div>
+
+
+<script type="text/javascript">
+
+
+    /*
+     ------------------------------------------------------------
+    Arrays: Access, add ,remove and update Element
+    Ordered indexed and are objects too. (typeof)
+    Unlike this kind of {key:value} Objects where their keys are not.
+
+     ------------------------------------------------------------
+     */
+
+    //self-execution function and protects from global variables
+    (function () {
+
+
+
+    })();
+
+
+</script>
+</body>
+</html>
+
