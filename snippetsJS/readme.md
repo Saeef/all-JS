@@ -30,3 +30,10 @@
   
  Switch case, if statement, date Object
  ![switch case](images/greeting.png?raw=true "mobile" target="_blank")
+ 
+ 
+ <hr />  
+<br />
+  
+ Arrays - push,shift,unshift,pop, splice
+ ![array methods](images/array-methods.png?raw=true "mobile" target="_blank")
