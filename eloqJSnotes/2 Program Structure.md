@@ -32,8 +32,8 @@ EXPRESSION AND STATEMENTS
             alert('whats wrong with u?');
   
   
- WHILE AND DO LOOPS
- ==================
+WHILE AND DO LOOPS
+==================
   
        EX
            var number = 0;
