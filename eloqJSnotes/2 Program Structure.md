@@ -32,17 +32,17 @@ EXPRESSION AND STATEMENTS
             alert('whats wrong with u?');
   
   
-  WHILE AND DO LOOPS
-  ==================
+ WHILE AND DO LOOPS
+ ==================
   
-  +   EX
+       EX
            var number = 0;
            while (number <=12) {
               console.log(number);
            }
            
            
-  +   EX.
+      EX.
             var result = 1;
             var counter = 0;
             while(counter < 10) {
@@ -53,33 +53,34 @@ EXPRESSION AND STATEMENTS
             // -> 1024
         
         
-###  FOR LOOPS
- 
+FOR LOOPS
+========= 
   
-    +   EX.
+        EX.
             for ( var number = 0;  number <= 12;  number ++) {
               console.log(number);
             }
         
         
-  SINGLE LINE COMMENTS
-  =====================
-      EX.   // comment here
+        
+SINGLE LINE COMMENTS           
+====================
+        EX.   // comment here
   
-  MULTIPLE LINE COMMENTS
-  =======================
-      EX.   /*
-            This is also a comment
-            more goes here
-            */  
+MULTIPLE LINE COMMENTS          
+======================
+        EX.   /*
+             This is also a comment
+             more goes here
+             */  
         
         
         
         
-  EXERCISES  (WARM UP CHAPTERS)
-  =========
+EXERCISES  (WARM UP CHAPTERS)
+=========
   
-    + TRIANGLE MADE OF POUND SIGNS USING LOOP  (IT WORKS WHATEVER)
+   ### TRIANGLE MADE OF POUND SIGNS USING LOOP  (IT WORKS WHATEVER)       
     
         var triangle ="#";
         var count = 0;
@@ -117,8 +118,8 @@ EXPRESSION AND STATEMENTS
             count ++;
         }
         
-    FIZZBUZZ EXERCISE (TOO EASY)
-    =================
+   ### FIZZBUZZ EXERCISE (TOO EASY)
+ 
             for (var num = 1; num <= 100; num++) {
                 if ((num % 3 == 0) && (num % 5 == 0)) {
                     console.log("FizzBuzz");
@@ -131,8 +132,9 @@ EXPRESSION AND STATEMENTS
                 console.log(num);
             }
         
-      CHESSBOARD EXERCISE       (I PROVIDE SIZE AND IT GIVES ME AN EQUAL NUMBER OF ROWS AND COLUMNS USING #X's/ X#'s)  
-      ===================       (NO FUNCTIONS YET - GOING BY THE BOOK - IT WORKS) 
+  ### CHESSBOARD EXERCISE       
+  ####I PROVIDE SIZE AND IT GIVES ME AN EQUAL NUMBER OF ROWS AND COLUMNS USING #X's/ X#'s
+      (NO FUNCTIONS YET - GOING BY THE BOOK - IT WORKS) 
     
               var total ="";  //it gives me undefined otherwise
               var size = Number(prompt("Enter the size of your board"));  //prompt throws an error on IDE's
