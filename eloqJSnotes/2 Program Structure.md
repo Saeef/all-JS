@@ -80,7 +80,7 @@ MULTIPLE LINE COMMENTS
 EXERCISES  (WARM UP CHAPTERS)
 =========
   
-   ### TRIANGLE MADE OF POUND SIGNS USING LOOP  (IT WORKS WHATEVER)       
+###  TRIANGLE MADE OF POUND SIGNS USING LOOP  (IT WORKS WHATEVER)       
     
         var triangle ="#";
         var count = 0;
@@ -118,7 +118,7 @@ EXERCISES  (WARM UP CHAPTERS)
             count ++;
         }
         
-   ### FIZZBUZZ EXERCISE (TOO EASY)
+###  FIZZBUZZ EXERCISE (TOO EASY)
  
             for (var num = 1; num <= 100; num++) {
                 if ((num % 3 == 0) && (num % 5 == 0)) {
@@ -132,8 +132,8 @@ EXERCISES  (WARM UP CHAPTERS)
                 console.log(num);
             }
         
-  ### CHESSBOARD EXERCISE       
-  ####I PROVIDE SIZE AND IT GIVES ME AN EQUAL NUMBER OF ROWS AND COLUMNS USING #X's/ X#'s
+###  CHESSBOARD EXERCISE       
+####I PROVIDE SIZE AND IT GIVES ME AN EQUAL NUMBER OF ROWS AND COLUMNS USING #X's/ X#'s
       (NO FUNCTIONS YET - GOING BY THE BOOK - IT WORKS) 
     
               var total ="";  //it gives me undefined otherwise
