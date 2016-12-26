@@ -21,3 +21,12 @@
   
  Even or Odd
  ![evenOrOdd](images/EvenOrOdd.png?raw=true "mobile" target="_blank")
+ 
+ 
+ 
+ 
+ <hr />  
+<br />
+  
+ Switch case, if statement, date Object
+ ![switch case](images/greeting.png?raw=true "mobile" target="_blank")
