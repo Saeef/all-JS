@@ -7,7 +7,7 @@
 
 <br />
   
- **js** :1:
+ **js** :one:
  ![js1](images/javascript1.png?raw=true "mobile" target="_blank")
  
  <br />
