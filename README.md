@@ -2,6 +2,7 @@
 
 ## <kbd>JS</kbd> notes and new <kbd>JS</kbd> snippets <kbd>LIB</kbd> in progress
 
+<br />
 
 <hr />  
 <br />
