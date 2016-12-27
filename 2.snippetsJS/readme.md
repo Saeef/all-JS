@@ -1,8 +1,9 @@
-### Long-term <kbd>OBJECTIVE:</kbd>   <KBD>JS</KBD> <KBD>PERIODIC</KBD>  <KBD>TABLE</KBD>
+### Long-term <kbd>OBJECTIVE:</kbd>   <KBD>JAVASCRIPT</KBD> <KBD>PERIODIC</KBD>  <KBD>TABLE</KBD>
 :package: To build a comprehensive sample-based JavaScript cheat sheet... 
 
 :bookmark: for every method, 
-:bookmark: property, primitive type, 
+:bookmark: property, 
+:bookmark: primitive type, 
 :bookmark: object, or 
 :bookmark: built-in function included
 
