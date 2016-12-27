@@ -1,6 +1,6 @@
 ## old <kbd>REPO</kbd>, new <kbd>REPO</kbd>
 
-## JS notes and new JS snippets lib in progress
+## <kbd>JS</kbd> notes and new <kbd>JS</kbd> snippets <kbd>LIB</kbd> in progress
 
 
 <hr />  
