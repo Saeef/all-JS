@@ -1,6 +1,6 @@
-### old repo
+## old repo new repo
 
-### eloqJS notes and my new JS snippets lib
+## JS notes and new JS snippets lib in progress
 
 
 <hr />  
