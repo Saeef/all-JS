@@ -14,7 +14,7 @@
  <hr />  
 <br />
   
- **js :two:**
+ **js** :two:
  ![js2](images/javascript2.png?raw=true "mobile" target="_blank")
 
 
