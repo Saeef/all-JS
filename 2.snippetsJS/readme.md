@@ -1,5 +1,6 @@
-### Long-term Objective: :packages:  :long-term:  :objective:
-<kbd>Objective</kbd>
+### Long-term <kbd>OBJECTIVE:</kbd> 
+:package: 
+
 To build a comprehensive sample-based JavaScript cheat sheet - for every method, property, primitive type, object, or built-in function included -ie: a dynamic/responsive JS periodic table page 
 
 <hr />  
