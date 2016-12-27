@@ -1,4 +1,4 @@
-## old <kbd>repo</kbd>, new <kbd>repo</kbd>
+## old <kbd>REPO</kbd>, new <kbd>REPO</kbd>
 
 ## JS notes and new JS snippets lib in progress
 
