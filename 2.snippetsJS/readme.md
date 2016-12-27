@@ -1,7 +1,12 @@
-### Long-term <kbd>OBJECTIVE:</kbd> 
-:package: 
+### Long-term <kbd>OBJECTIVE:</kbd>   <KBD>JS</KBD> <KBD>PERIODIC</KBD>  <KBD>TABLE</KBD>
+:package: To build a comprehensive sample-based JavaScript cheat sheet... 
 
-To build a comprehensive sample-based JavaScript cheat sheet - for every method, property, primitive type, object, or built-in function included -ie: a dynamic/responsive JS periodic table page 
+:bookmark: for every method, 
+:bookmark: property, primitive type, 
+:bookmark: object, or 
+:bookmark: built-in function included
+
+
 
 <hr />  
 <br />
