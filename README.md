@@ -7,7 +7,7 @@
 
 <br />
   
- **js :1: **
+ **js** :1:
  ![js1](images/javascript1.png?raw=true "mobile" target="_blank")
  
  <br />
