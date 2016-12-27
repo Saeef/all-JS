@@ -1,4 +1,4 @@
-## old repo new repo
+## old repo, new repo
 
 ## JS notes and new JS snippets lib in progress
 
