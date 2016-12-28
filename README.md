@@ -7,14 +7,14 @@
 
 <br />
   
- **js** :one:
+ :js: :one:
  ![js1](images/js1.png?raw=true "mobile" target="_blank")
  
  <br />
  <hr />  
 <br />
   
- **js** :two:
+ :js: :two:
  ![js2](images/js2.png?raw=true "mobile" target="_blank")
 
 
@@ -22,7 +22,7 @@
  <hr />  
 <br />
   
- **js** :three:
+ :js: :three:
  ![js2](images/js3.png?raw=true "mobile" target="_blank")
 
 
@@ -31,7 +31,7 @@
  <hr />  
 <br />
   
- **js** :four:
+ :js: :four:
  ![js2](images/js4.png?raw=true "mobile" target="_blank")
 
 
