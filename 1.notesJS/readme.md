@@ -5,5 +5,6 @@
  <hr />  
 <br />
   
- **js** :file:
+ **js** :source:
+
  ![js2](images/js.jpg?raw=true "mobile" target="_blank")
