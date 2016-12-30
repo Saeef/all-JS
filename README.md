@@ -1,4 +1,4 @@
-## old <kbd>REPO</kbd>, new <kbd>REPO</kbd>
+## old <kbd>REPO</kbd>, new <kbd>REPO</kbd> Merged
 
 ## :one: <kbd>JS</kbd> notes and      
 ## :two: new <kbd>JS</kbd> snippets <kbd>LIB</kbd> in progress
