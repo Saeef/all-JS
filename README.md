@@ -1,6 +1,6 @@
 ## :construction:&nbsp; old <kbd>REPO</kbd>, new <kbd>REPO</kbd> Merged&nbsp;&nbsp;  :construction:
 
-## :one: <kbd>JS</kbd> notes and      
+## :one: <kbd>JS</kbd> notes (part of a 6-week JavaScript course taken online from the University of Chicago, Illinois.)         
 ## :two: new <kbd>JS</kbd> snippets <kbd>LIB</kbd> in progress
 
 
