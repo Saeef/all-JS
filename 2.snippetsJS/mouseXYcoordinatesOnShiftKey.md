@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script>
+  //Event handling
+  document.addEventListener('DOMContentLoaded', 
+          function(event) {
+
+             function sayHello (event) {
+                 console.log(event);
+                 this.textContent = "Said it dont forget it";
+                 var name = document.
+                     getElementById('name').value;
+                 var message = "hello " + name;
+                 //insert message 
+                 document
+                 .getElementById('content')
+                 .textContent = message;
+
+             }//sayHello    
+
+             //event to call the function
+             document
+             .querySelector('button')
+             .addEventListener('click', sayHello);
+
+            //add event listener
+             document
+             .querySelector('body')
+             .addEventListener('mousemove',function(e) {
+                  //logs mousemove coordinates only when
+                  if(e.shiftKey === true) {
+                      console.log("x: " + e.clientX);
+                      console.log("y: " + e.clientY);
+
+                  }//if shiftkey
+
+             });
+
+   });//DOMContentLoaded
+  
+  </script>
+</head> <!-- end of head -->
+<body style="border:1px solid red">
+
+  <h1>Golf course</h1>
+  
+  <input type="text" id="name" />
+  <button>say some</button>
+  
+  <div id="content"></div>
+</body>
+</html>
