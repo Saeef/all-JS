@@ -1,6 +1,6 @@
 
 
- <kbd>notes</kbd> <kbd>JS</kbd> &nbsp; new notes part of a 6 week JavaScript course taken online from the University of Chicago, Illinois.
+ <kbd>notes</kbd> <kbd>JS</kbd> &nbsp; new notes part of a 6-week JavaScript course taken online from the University of Chicago, Illinois.
  <hr />  
 
  
