@@ -3,7 +3,7 @@
 ## :one: <kbd>JS</kbd> notes and         
 ## :two: new <kbd>JS</kbd> snippets <kbd>LIB</kbd> in progress
 
-> (new notes part of a 6-week JavaScript course taken online from the University of Chicago, Illinois.)
+> (new notes part of a 5 modules JavaScript course taken online from the University of Chicago, Illinois.)
 
 
 <br />
