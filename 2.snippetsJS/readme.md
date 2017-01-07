@@ -53,3 +53,15 @@
   
  <KBD>arrays:push,_shift,_unshift,_pop,_splice</KBD> 
  ![array methods](images/array-methods.png?raw=true "mobile" target="_blank")
+ 
+ 
+ 
+
+ <hr />  
+<br />
+  
+ <kbd>clock</kbd> 
+ ![clock](images/clock.png?raw=true "mobile" target="_blank")
+ 
+ 
+ 
