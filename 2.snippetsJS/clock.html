@@ -1,0 +1,250 @@
+/*
+-------------------------------------------------------------------------------------------------
+
+******************    Date Object sample **********************************
+
+--------------------------------------------------------------------------------------------------
+*/
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date Object Sample</title>
+<style>
+	.wrapper {
+		width: 600px;
+	    margin: 0 auto;
+	    box-shadow: 1px 3px 7px 6px rgba(0, 0, 0, 0.15);
+	    background-color: #fdfdfd;
+	    box-shadow: 0px 2px 7px 4px rgba(0, 0, 0, 0.1);
+	    position: relative;
+
+	}
+	img {
+		height: 512px;
+		width: 100%;
+		max-width: 512px;
+		margin:0 auto;
+		padding:0 2.75em;
+	}
+	h1 {
+		text-align: center;
+	    font-size: 42px;
+	    line-height: 56px;
+	    vertical-align: middle;
+	    font-family: monospace;
+	    box-shadow: 1px 1px 1px 2px rgba(181, 177, 177, 0.33);
+	    text-shadow: -1px 3px 5px rgba(228, 221, 221, 0.45);
+	    color: #dedede;
+	    background-color: white;
+	}
+
+	#time {
+		position: absolute;
+	    left: 125px;
+	    top: 390px;
+	    font-size: 58px;
+	    line-height: 72px;
+	    vertical-align: middle;
+	    letter-spacing: 2px;
+	    color: rgb(156, 156, 156);
+	    text-shadow: 1px 1px 2px rgba(16, 16, 16,.5);
+	}
+
+	small {
+
+		font-size: 16px;
+	    letter-spacing: 2px;
+	    line-height: 24px;
+	    vertical-align: baseline;
+	    color: rgb(107, 107, 107);
+		
+	}
+
+	#ampm {
+
+	position: absolute;
+    left: 439px;
+    top: 520px;
+    font-size: 23px;
+    line-height: 32px;
+    vertical-align: bottom;
+    background-color: rgb(255, 251, 219);
+    color: brown;
+    padding: .1em .2em;
+    color: rgb(128, 128, 128);
+    box-shadow: -1px 1px rgba(0, 0, 0, 0.2); 
+
+	}
+
+	.intro {
+		padding: 0 1.2em;
+	    text-align: justify;
+	    line-height: 22px;
+	    color: #8d8a8a;
+	}
+
+	footer {
+		text-align: center;
+	    background: #e1e1e1;
+	    padding: 1em 0;
+	    color: black;
+	    font-size: 22px;
+	    line-height: 36px;
+	    vertical-align: middle;
+	    width: 608px;
+	    margin: 0 auto;
+	    box-shadow: 0px 1px #5d5d5d;
+	    background-color: #E0E0E0;
+	}
+
+	#day {
+		position: absolute;
+	    top: 420px;
+	    left: 240px;
+	    font-size: 24px;
+	    color: rgb(122, 120, 126);
+	    background: rgba(222, 222, 221, 0.5);
+	    padding: 0 .5em;
+	    border-radius: 6px;
+	}
+
+</style>
+
+
+
+
+</head>
+<body>
+	<div class="wrapper">
+		<h1>clocka clock</h1>
+		<p class="intro">There are many ways to do this, from using an inline event to
+		call the function instead, maybe setInterval or if statements to handle the zeros.<br/>
+		The main thing here is 'setTimeout' inside of the
+		function, which creates this loop. No need for it to be a function expression either - it works either way. Bottom line, it is supposedly more accurate this way, but when using 'setTimeout', then
+		you need to pass a function.</p>
+		<p id="time"></p>
+		<span id="day"></span>
+		<span id="ampm"></span>
+		<img src="digital.png">
+
+
+
+
+	</div>
+
+	<footer>Date Object sample</footer>
+
+
+<script>
+
+
+
+		function clocka() {
+			//debugger;
+			var today = new Date();
+				//date instance
+				console.log(today);
+				//get hours
+				var hrs = today.getHours();
+				console.log('\n hours: ' + hrs);
+				var mins = today.getMinutes();
+				console.log('\n minutes:' + mins);
+				var secs = today.getSeconds();
+				console.log('\n seconds: ' + secs);
+
+				var ampm = document.getElementById('ampm');
+				//set ampm to am
+				ampm.innerHTML = 'AM';
+				
+				
+
+				//need two digits for styling
+				if (hrs < 10) {
+					hrs = "0" + hrs;
+				} 
+				//set to pm
+				if (hrs >= 12) {
+					console.log(hrs);
+					ampm.innerHTML = 'PM';
+				} 
+
+				//set time to 12hr format
+				if (hrs >= 13) {
+					hrs = '0' + (hrs - 12);
+				}
+				// maintain two digits for mins
+				if (mins < 10) {
+					mins = "0" + mins;
+				}
+				//maintain two digits for secs
+				if (secs < 10) {
+					secs = "0" + secs;
+				}
+
+				//grab day elem
+				var dayIs = document.getElementById('day');
+				//todays day
+				var day = today.getDay();
+
+				switch(day) {
+					case 0:
+					day = "Sunday";
+					break;
+					case 1:
+					day = "Monday";
+					break;
+					case 2:
+					day = "Tuesday";
+					break;
+					case 3:
+					day = "Wednesday";
+					break;
+					case 4:
+					day = "Thursday";
+					break;
+					case 5:
+					day = "Friday";
+					break;
+					case 6:
+					day = "Saturday";
+					break;
+
+				}
+
+				//add to page
+				console.log(dayIs);
+				dayIs.innerHTML = day;
+
+				
+
+
+
+				//grab time id
+				var time = document.getElementById('time');
+				console.log(time);
+			
+				time.innerHTML = hrs + "<small>hrs </small>:" + mins + "<small>min </small>:" + secs + "<small>sec</small>";
+
+
+				//set timeout/loop
+				var goClock = setTimeout(function() {
+					clocka();
+				},100);
+
+
+
+
+		}//clocka
+		
+		document.addEventListener('DOMContentLoaded',clocka);
+
+
+
+
+	
+	
+
+</script>
+	
+</body>
+</html>
