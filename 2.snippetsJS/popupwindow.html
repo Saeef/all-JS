@@ -1,0 +1,178 @@
+/*
+----------------------------------------------------
+
+Popup Window example
+----------------------------------------------------
+*/
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Popup Window</title>
+<style>
+	.wrapper {
+		width: 600px;
+	    margin: 0 auto;
+	    box-shadow: 1px 3px 7px 6px rgba(0, 0, 0, 0.15);
+	    background-color: #fdfdfd;
+	    box-shadow: 0px 2px 7px 4px rgba(0, 0, 0, 0.1);
+	    position: relative;
+	    min-height: 400px;
+
+	}
+	
+	h1 {
+		text-align: center;
+	    font-size: 42px;
+	    line-height: 56px;
+	    vertical-align: middle;
+	    font-family: monospace;
+	    box-shadow: 1px 1px 1px 2px rgba(181, 177, 177, 0.33);
+	    text-shadow: -1px 3px 5px rgba(228, 221, 221, 0.45);
+	    color: #dedede;
+	    background-color: white;
+	}
+
+	
+
+	
+	footer {
+		text-align: center;
+	    background: #e1e1e1;
+	    padding: 1em 0;
+	    color: black;
+	    font-size: 22px;
+	    line-height: 36px;
+	    vertical-align: middle;
+	    width: 608px;
+	    margin: 0 auto;
+	    box-shadow: 0px 1px #5d5d5d;
+	    background-color: #E0E0E0;
+	}
+
+	label {
+		display: block;
+	    margin: 2em 0 0 1em;
+	    padding: 0;
+	    font-size: 18px;
+	    line-height: 36px;
+	    vertical-align: middle;
+	    color: #504545;
+	}
+
+	input[type=button] {
+		display: block;
+	    padding: 7px 25px;
+	    margin: 20px 5px 5px 30px;
+	    color: rgb(63, 63, 63);
+	    font-size: 18px;
+	    letter-spacing: -1px;
+	    background: #38bd48;
+	    line-height: 36px;
+	    vertical-align: middle;
+	    border: 1px solid #139122;
+	    border-radius: 4px;
+	    box-shadow: 0px 1px 3px 1px #9E9E9E;
+	    text-shadow: -2px 0px 1px rgba(226, 217, 217, 0.35);
+	    cursor: pointer;
+	}
+
+
+	
+
+	
+
+	
+
+</style>
+
+
+
+
+</head>
+<body>
+	<div class="wrapper">
+		<h1>Popup Window</h1>
+		<p class="intro"></p>
+		
+
+
+		<form name="myForm">
+			<label>Click to see window screen properties:</label>
+		    <input type="button" value="open with Popup" 
+		     name="button" onClick="openWin()">
+
+		</form>
+
+		<div id="message"></div>
+
+
+	</div>
+
+	<footer>Popup window sample</footer>
+
+
+ <script language="JavaScript1.2">
+        
+        function openWin(){
+        	//width,height for popup
+        	width = 700;
+        	height = 500;
+        	//url,title for popup
+        	var url = '';
+        	var title = 'whatever';
+        	//left,top position for popup
+        	var left = (screen.width/2) -(width/2);
+        	var top = (screen.height/2) - (height/2);
+        	
+        	var popWindow = window.open(url, title, 'toolbar=no, location=no,directories=no, status=no, menubar=no,scrollbar=yes, resizable=no, copyhistory=no, width=' + width +', height=' + height + ', top=' + top + ', left=' +left);
+
+        	var doc = popWindow.document;
+        	doc.open();
+
+            //style popup on the fly
+            doc
+            .write("<body style='position:absolute;left:30%;top:5%;   font-size20px;line-height:40px;color:#f73723;text-align:center; border:1px solid #333; padding:1em;'>");
+
+            //availHeight
+            doc
+            .write("The availHeight is: " + screen.availHeight + "<br>");
+            
+            //availWidth
+            doc
+            .write("The availWidth is: " + screen.availWidth + "<br>");
+            
+            //colorDepth
+            doc
+            .write("The colorDepth is: " + screen.colorDepth + "<br>");
+            
+            //height
+            doc
+            .write("The height is: " + screen.height + "<br>");
+            
+            //pixelDepth
+            doc
+            .write("The pixelDepth is: " + screen.pixelDepth + "<br>");
+            
+            //width
+            doc
+            .write("The width is: " + screen.width + "<br>");
+
+             //orientation
+            doc
+            .write("Screen orientation: " + screen.orientation.type + "<br>");
+           
+			//close           
+            doc
+            .close();
+
+
+  }
+        
+  
+
+    </script>
+	
+</body>
+</html>
