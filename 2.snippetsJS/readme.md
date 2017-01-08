@@ -71,5 +71,12 @@
  ![popup window](images/popupwindow.png?raw=true "mobile" target="_blank")
  
  
+ <hr />  
+<br />
+  
+ <kbd>bubbling phase - mouseover event</kbd> 
+ ![bubbling phase - mouseover](images/bubblingphase.png?raw=true "mobile" target="_blank")
+ 
+ 
  
  
