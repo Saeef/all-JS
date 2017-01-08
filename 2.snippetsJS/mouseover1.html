@@ -1,0 +1,160 @@
+/*
+mouseover, mouseleave and using 'this' keyword to get information/properties of the element you have just
+clicked/mouseovered on - simple example
+
+*/
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Mouseover,Mouseleave and this</title>
+<style>
+    body {
+        width: 1200px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.62);
+        border: 1px solid blanchedalmond;
+        padding: 2em;
+        font-size: 30px;
+        line-height: 40px;
+        color: #2b4e60;
+    }
+    h1 {
+        font-size: 40px;
+        text-align: center;
+        line-height: 56px;
+        vertical-align: middle;
+        color: #0967b0;
+    }
+
+    section {
+        width:100%;
+        overflow:auto;
+
+    }
+
+    article:first-of-type {
+        margin-right:1em;
+        width:45%;
+        float:left;
+        display: inline-block;
+    }
+
+    small {
+        display: block;
+        margin-top:1em;
+    }
+
+    p {
+        margin:5px 20px 5px 0;
+    }
+
+    article {
+        width:50%;
+        float:left;
+        display: inline-block;
+    }
+
+    footer {
+        margin:3em 1em;
+        border:1px solid red;
+        padding:20px 10px;
+    }
+
+</style>
+</head>
+<body>
+<header>
+    <h1>Example of Mouseover, mouseleave events and using this to grab elements info</h1>
+</header>
+
+<section>
+
+    <article>
+        <header>
+            <h2>image one</h2>
+            <a href="#" title="image1" onclick="alert(this.title)">
+            <img src="jsMichigan/images/image1.png" onmouseover="info(this);"
+                 onmouseleave="document.getElementById('output').innerHTML='hover over an image';"
+                 style="max-width:400px;" alt="image1">
+            </a>
+            <small>Posted on Monday
+            </small>
+        </header>
+        <p>something else about image one</p>
+    </article>
+
+    <article>
+        <header>
+            <h2>image two</h2>
+            <a href="#" title="image2" onclick="alert(this.title)">
+                <img src="jsMichigan/images/image2.png" onmouseover="info(this);"
+                     onmouseleave="document.getElementById('output').innerHTML='hover over an image';"
+                     style="max-width:400px;" alt="image2">
+            </a>
+            <small>Posted on Tuesday
+            </small>
+        </header>
+        <p>something else about image two</p>
+    </article>
+
+</section>
+
+<section>
+
+<article>
+    <header>
+        <h2>image three</h2>
+        <a href="#" title="image3" onclick="alert(this.title)">
+            <img src="jsMichigan/images/image3.png" onmouseover="info(this);"
+                 onmouseleave="document.getElementById('output').innerHTML='hover over an image';"
+                 style="max-width:400px;" alt="image3">
+        </a>
+        <small>Posted on Wednesday
+        </small>
+    </header>
+    <p>something else about image three</p>
+</article>
+
+<article>
+    <header>
+        <h2>image four</h2>
+        <a href="#" title="image4" onclick="alert(this.title)">
+            <img src="jsMichigan/images/image4.png" onmouseover="info(this);"
+                 onmouseleave="document.getElementById('output').innerHTML='hover over an image';"
+                 style="max-width:400px;" alt="image4">
+        </a>
+        <small>Posted on Thursday
+        </small>
+    </header>
+    <p>something else about image four</p>
+</article>
+
+</section>
+
+<footer id="output">
+
+
+</footer>
+
+<script>
+    function info(ela) {
+
+        var output = document.getElementById('output');
+        return output.textContent = ela.alt;
+
+    }
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
