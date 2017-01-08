@@ -1,0 +1,209 @@
+/*
+same as mouseover1 but instead adding events to multiple elements.
+Wrapped images on a div, in order to target this element instead of setting events on each image.
+Then, catched the events on the bubbling phase. 
+Mouseove, mouseleave, inline click alert event, stopPropagation once event's captured.
+
+
+*/
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Mouseover,Mouseleave and this</title>
+    <style>
+        body {
+            width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.62);
+            border: 1px solid blanchedalmond;
+            padding: 2em;
+            font-size: 30px;
+            line-height: 40px;
+            color: #2b4e60;
+        }
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            line-height: 56px;
+            vertical-align: middle;
+            color: #0967b0;
+        }
+
+        h2 {
+            font-size: 36px;
+            text-align: center;
+            line-height: 46px;
+            vertical-align: middle;
+            color: #0960b0;
+        }
+
+        section {
+            width:100%;
+            overflow:auto;
+
+        }
+
+        article:first-of-type {
+            margin-right:4em;
+            width:40%;
+            float:left;
+            display: inline-block;
+        }
+
+        small {
+            display: block;
+            margin-top:1em;
+        }
+
+        p {
+            margin:5px 20px 5px 0;
+        }
+
+        article {
+            width:40%;
+            float:left;
+            display: inline-block;
+        }
+
+        footer {
+            margin:3em 1em;
+            border:1px solid red;
+            padding:20px 10px;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Capturing all images on the Bubbling Phase Example</h1>
+    <h2>Mouseover, mouseleave events</h2>
+</header>
+
+<div class="mainContent">
+<section>
+
+    <article>
+        <header>
+            <h2>image one</h2>
+            <a href="#" title="image1" onclick="alert(this.title)">
+                <img src="jsMichigan/images/image1.png"
+                     style="max-width:450px;" alt="image1">
+            </a>
+            <small>Posted on Monday
+            </small>
+        </header>
+        <p>something else about image one</p>
+    </article>
+
+    <article>
+        <header>
+            <h2>image two</h2>
+            <a href="#" title="image2" onclick="alert(this.title)">
+                <img src="jsMichigan/images/image2.png"
+                     style="max-width:450px;" alt="image2">
+            </a>
+            <small>Posted on Tuesday
+            </small>
+        </header>
+        <p>something else about image two</p>
+    </article>
+
+</section>  <!-- end of row 1   -->
+
+
+<section>
+
+    <article>
+        <header>
+            <h2>image three</h2>
+            <a href="#" title="image3" onclick="alert(this.title)">
+                <img src="jsMichigan/images/image3.png"
+                     style="max-width:450px;" alt="image3">
+            </a>
+            <small>Posted on Wednesday
+            </small>
+        </header>
+        <p>something else about image three</p>
+    </article>
+
+    <article>
+        <header>
+            <h2>image four</h2>
+            <a href="#" title="image4" onclick="alert(this.title)">
+                <img src="jsMichigan/images/image4.png"
+                     style="max-width:450px; margin:0 auto;" alt="image4">
+            </a>
+            <small>Posted on Thursday
+            </small>
+        </header>
+        <p>something else about image four</p>
+    </article>
+
+</section> <!-- end of row 2   -->
+</div> <!-- end of div mainContent   -->
+
+
+<footer id="output">
+
+
+</footer>
+
+<script>
+
+    //images info
+    function info(e) {
+        //console.log('target: ');
+        //console.log(e.target);
+        //console.log('target image:');
+        //console.log(e.target.img);
+        console.log(e);
+
+        //you could check against e.currentTarget to make sure e.target isn't parent element
+        if (e.target.tagName == "IMG") {
+            console.log('finally an image');
+            var imgInfo = e.target;
+
+            //location for drop
+            var output = document.getElementById('output');
+            output.innerHTML = "<strong>image alt: </strong>" + imgInfo.alt +   "<br />" +"<strong>image width is: </strong>" + imgInfo.naturalWidth;
+            output.innerHTML += "<br />";
+            output.innerHTML += " image id: " + imgInfo.id + "<br/>" + "<strong>nodeType: </strong>" + imgInfo.nodeType;
+            output.innerHTML += "<br/>and last is outerHTML/image: " + imgInfo.outerHTML;
+            e.stopPropagation();
+        }
+
+
+
+
+
+
+
+    }
+
+    //capture all img events on the bubbling phase
+    //target is mainContent
+    var allElems = document.querySelector('.mainContent');
+    console.log(allElems);
+    allElems.addEventListener('mouseover', info, false);
+
+    allElems.addEventListener('mouseleave', function(e) {
+        //making sure works
+        console.log('mouse left');
+        //clear up output
+        var output = document.getElementById('output');
+        output.innerHTML = "mouse over an image to checkout its properties";
+        e.stopPropagation();
+    },false);
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
