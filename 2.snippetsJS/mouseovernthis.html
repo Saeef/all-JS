@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Mouseover,Mouseleave and this</title>
+    <style>
+        body {
+            width: 1600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.62);
+            border: 1px solid blanchedalmond;
+            padding: 2em;
+
+
+        }
+        h1 {
+            font-size: 55px;
+            text-align: center;
+            line-height: 66px;
+            vertical-align: middle;
+            color: #a87cff;
+            text-shadow: -1px 2px 0px #221156;
+            font-family: monospace;
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            font-size: 44px;
+            text-align: center;
+            line-height: 52px;
+            vertical-align: middle;
+            color: #4eab28;
+            text-shadow: 0px 0px 0px rgba(42, 74,74,.5);
+        }
+
+        section {
+            width:100%;
+            overflow:auto;
+
+        }
+
+
+
+        small {
+            display: block;
+            margin-top:1em;
+            font-size:16px;
+            font-weight:bold;
+        }
+
+        p {
+            margin:5px 20px 5px 0;
+        }
+
+        article.a {
+            width:90%;
+            margin:0 auto;
+        }
+
+        article.b {
+            width:33%;
+            float:left;
+            display: inline-block;
+        }
+
+        footer {
+            margin:3em 1em;
+            border:1px solid red;
+            padding:20px 10px;
+        }
+
+
+        #output{
+            height:750px;
+            border: 5px solid black;
+            font-size:36px;
+            background-color: rgba(143, 106, 255, 0.88);
+            color: #1d2323;
+            text-align: center;
+            font-size: 45px;
+            margin: 2em auto 3em;
+            padding-top:1em;
+            box-shadow: -9px 9px 2px -5px rgba(15, 16, 2, 0.75);
+        }
+
+        #output h2 {
+            font-size: 42px;
+            text-align: center;
+            line-height: 46px;
+            vertical-align: middle;
+            text-decoration:underline;
+
+        }
+
+        #output img {
+
+            min-width:600px;
+            margin:0 auto;
+            border-radius:5px;
+            box-shadow: -3px 3px black;
+            border-top:2px solid #1d2323;
+            border-right:1px solid #1d2323;
+            display:block;
+            margin-top:1em;
+        }
+
+        #output span {
+            color: #504545;
+        }
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Hover over an image to display it in purple box</h1>
+    <h2>Mouseover, mouseleave, this, events and id as url</h2>
+</header>
+
+
+<div class="mainContent">
+<section>
+
+    <article class="a">
+        <header>
+
+            <div id="output">
+                <h2>hover over an image below to display it here</h2>
+
+            </div>
+
+        </header>
+
+    </article>
+
+
+
+</section>  <!-- end of row 1   -->
+
+
+<section>
+
+
+    <article class="b">
+        <header>
+            <h2>Cat image</h2>
+            <a href="#" title="bruno the cat" onclick="alert(this.title)">
+                <img src="images/cat.jpg" id="cat"
+                     style="max-width:500px;" alt="bruno the cat">
+            </a>
+            <small>Posted on Tuesday
+            </small>
+        </header>
+
+    </article>
+
+    <article class="b">
+        <header>
+            <h2>dog image</h2>
+            <a href="#" title="coolio the dog" onclick="alert(this.title)">
+                <img src="images/dog.jpg" id="dog"
+                     style="max-width:500px;" alt="coolio the dog">
+            </a>
+            <small>Posted on Wednesday
+            </small>
+        </header>
+
+    </article>
+
+    <article class="b">
+        <header>
+            <h2>monkey image</h2>
+            <a href="#" title="monk the monkey" onclick="alert(this.title)">
+                <img src="images/monkey.jpg" id="monkey"
+                     style="max-width:500px;" alt="monk the monkey">
+            </a>
+            <small>Posted on Thursday
+            </small>
+        </header>
+
+    </article>
+
+</section> <!-- end of row 2   -->
+</div> <!-- end of div mainContent   -->
+
+
+
+
+<script>
+
+    //images info
+    function info(e) {
+        //console.log('target: ');
+        //console.log(e.target);
+        //console.log('target image:');
+        //console.log(e.target.img);
+        console.log(e);
+
+        //you could check against e.currentTarget to make sure e.target isn't parent element
+        if (e.target.tagName == "IMG") {
+            console.log('finally an image');
+            var imgInfo = e.target;
+
+            //location for drop
+            var output = document.getElementById('output');
+            output.innerHTML = "<span>image alt: </span>" + imgInfo.alt +   "<br />" +"<span>image width is: </span>" + imgInfo.naturalWidth;
+            output.innerHTML += "<br />";
+            output.innerHTML += "<span>image id: </span>" + imgInfo.id + "<br/>" + "<span>nodeType: </span>" + imgInfo.nodeType;
+            output.innerHTML += "<br/>" + imgInfo.outerHTML;
+            e.stopPropagation();
+        }
+
+
+
+
+
+
+
+    }
+
+    //capture all img events on the bubbling phase
+    //target is mainContent
+    var allElems = document.querySelector('.mainContent');
+    console.log(allElems);
+    allElems.addEventListener('mouseover', info, false);
+
+    allElems.addEventListener('mouseleave', function(e) {
+        //making sure works
+        console.log('mouse left');
+        //clear up output
+        var output = document.getElementById('output');
+        output.innerHTML = "mouse over an image to checkout its properties";
+        e.stopPropagation();
+    },false);
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
