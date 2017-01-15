@@ -86,5 +86,11 @@
  
  
  
+  <hr />  
+<br />
+  
+ <kbd>bubbling phase - mouseover event</kbd> 
+ ![jsonajax](images/jsonajax.png?raw=true "mobile" target="_blank")
+ 
  
  
