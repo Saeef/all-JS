@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jsonByAjax</title>
+    <!-- Bootstrap CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .toppushbot {
+            padding-top: 90px;
+        }
+        .navbar.navbar-default.navbar-fixed-top {
+            background-color: #d13030;
+            border-bottom: 1px solid #751313;
+            border-top: 1px solid rgba(117, 19, 19, 0.78);
+        }
+        .topleft,
+        .topright {
+            min-height: 500px;
+            background-color: rgba(209, 48, 48, 0.02);
+            padding: 1em 2em;
+            font-size: 16px;
+            line-height: 32px;
+            vertical-align: middle;
+            margin-left: 2em;
+            box-shadow: 0px 1px 1px 1px rgba(68, 61, 61, 0.2);
+            border-radius: 4px;
+        }
+        .page-header {
+            padding-bottom: 9px;
+            margin: 40px 0 20px;
+            border-bottom: 1px solid #eee;
+            box-shadow: 0px 7px 0px 1px rgba(0, 0, 0, 0.1);
+            border-top: 3px solid #f7f7f7;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .page-header h2 {
+            padding: 0 15px;
+        }
+        h2 {
+            font-size: 30px;
+            background-color: white;
+            color: #3a2a2a;
+            text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.55);
+        }
+        .page-header p {
+            padding: 0 15px;
+        }
+        h1 small {
+            float: right;
+            color: #fff;
+            font-size: 12px;
+            line-height: 45px;
+            vertical-align: middle;
+        }
+        .navbar-default .navbar-nav>.active>a,
+        .navbar-default .navbar-nav>.active>a: focus, .navbar-default .navbar-nav>.active>a: hover {
+            color: #555;
+            background-color: #ffffff;
+        }
+        .navbar-default .navbar-nav>li>a {
+            color: #230404;
+        }
+        .navbar-default .navbar-brand {
+            color: #f5eeee;
+        }
+        h1 {
+            background-color: #d22b2b;
+            padding: 10px 15px;
+            color: #ececec;
+            border-radius: 4px;
+            box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.45);
+        }
+        h3 {
+            text-align: center;
+            margin-bottom: 3em;
+            color: rgba(47, 46, 46, 0.75);
+            font-size: 28px;
+            line-height: 34px;
+            border: 1px dotted rgba(0, 0, 0, 0.3);
+            padding: 5px;
+            background-color: #efefef;
+            box-shadow: 0px 1px 0px 2px rgba(0, 0, 0, 0.59);
+        }
+        .container {} #enterData {
+            opacity: 1;
+        }
+        #output {
+            font-size: 21px;
+            line-height: 34px;
+            font-weight: 300;
+        }
+        #footer {
+            height: 90px;
+            background-color: #212121;
+            margin-top: 120px;
+        }
+        h4.traffic {
+            background-color: red;
+            padding: 12px 16px;
+            box-shadow: 0px 1px rgba(0, 0, 0, 0.35);
+            color: #f3f2f2;
+            text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.35);
+        }
+        #footer p {
+            padding-top: 2em;
+            color: #fafafa;
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 1px;
+            margin-left: 20px;
+        }
+        .material-icons {
+            line-height: 42px;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">jsonByAjax</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a>
+                        </li>
+                        <li><a href="#about">About</a>
+                        </li>
+                        <li><a href="#contact">Contact</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a>
+                                </li>
+                                <li><a href="#">Another action</a>
+                                </li>
+                                <li><a href="#">Something else here</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a>
+                                </li>
+                                <li><a href="#">One more separated link</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <!-- Begin page content -->
+        <div class="container">
+
+            <div class="toppushbot">
+
+                <h1 class="text-xs-center">isJsonByAjax <i class="material-icons">call_split</i>
+      <small>part of JS single pages <i class="material-icons">done_all</i></small></h1>
+
+            </div>
+            <!--  end of div toppushbot   -->
+
+            <div class="page-header clearfix">
+
+                <h2>Example Shows Json Data Call Requests To An External URL <i class="material-icons">network_wifi</i></h2>
+                <p>Json Data Returned Asynchronously with AJAX, and JavaScript</p>
+
+            </div>
+            <!--  end of div page-header   -->
+
+            <div class="row">
+                <div class="col-md-5 topleft">
+                    <h3>json/ajax calls</h3>
+                    <p class="lead">json/ajax calls</p>
+
+                    <button id="button" type="button" class="btn btn-danger btn-lg btn-block">
+                        Fetch External Data
+                    </button>
+
+                </div>
+                <div style="position: relative;" class="col-md-6 col-md-pullright-1 topright clearfix">
+                    <h3 id="enterData">server returned data</h3>
+                    <div id="output">
+                        server returned data
+                    </div>
+                    <!--  end of div output   -->
+                </div>
+
+
+
+            </div>
+            <!--  end of div container   -->
+
+        </div>
+        <!--  end of div id wrap   -->
+
+        <div id="footer">
+            <div class="container">
+                <p>stefanoL. <i class="material-icons">graphic_eq</i>
+                </p>
+            </div>
+        </div>
+        <!--  end of div footer   -->
+
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <script>
+            //new instance obj
+            var httpReq = new XMLHttpRequest();
+            httpReq.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
+             //once data loaded log it to console
+            httpReq.onload = function() {
+                //console.log(httpReq.responseText);
+                //grab data
+                var dataRec = httpReq.responseText;
+            };
+             //send request
+            httpReq.send();
+
+
+
+
+            function dataServ() {
+
+                //for toggle grab handle
+                var testa = document.getElementById('enterData');
+                console.log(testa);
+                //grab output handle
+                var one = document.getElementById('output');
+
+
+
+                var data = parseInt(testa.style.opacity); //equals 1 from opacity
+
+                //testa style set to 1 in CSS 
+                if (data == 0) {
+                    console.log('im here 2');
+                    //grab one handle and change innerHTMl again
+                    one.innerHTML = "<div id='output'>server returned data</div>";
+                    //testa lights back on
+                    testa.style.position = "";
+                    testa.style.opacity = 1;
+                    testa.style.top = "";
+
+
+                } //if
+
+                //allora next click comes this way
+                else {
+
+                    console.log('im here 1');
+                    //change innerHTML
+                    one.innerHTML = "<h4 class='traffic'>Data it's on the way! Lots of traffic at the moment..</h4>";
+                    //turn off the opacity before u leave the room
+                    testa.style.position = "absolute";
+                    testa.style.top = "5000px";
+                    //turn off lights before leaving
+                    testa.style.opacity = 0;
+                    console.log('no im here damn it!');
+
+                }
+
+
+
+            } //dataServ
+
+
+            document.getElementById('button')
+                .addEventListener('click', dataServ, false);
+        </script>
+</body>
+
+</html>
