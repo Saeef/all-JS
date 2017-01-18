@@ -258,65 +258,71 @@ then click one more time to bring back default elem/ reset.
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-        <script>
-            //new instance obj
-            var httpReq = new XMLHttpRequest();
-            httpReq.open('GET', 'https://api.github.com');
-             //once data loaded log it to console
-            httpReq.onload = function() {
-                //console.log(httpReq.responseText);
-                //grab data
-                var dataRec = httpReq.responseText;
-            };
-             //send request
-            httpReq.send();
+         <script>
 
+            function apiCall() {
 
+                //new instance obj
+                var httpReq = new XMLHttpRequest();
+                httpReq.open('GET', 'https://api.github.com');
+                httpReq.onload = function() {
+                    console.log('all data:');
+                    //JSON.parse
+                    var dataRec = JSON.parse(httpReq.responseText);             
+                    console.log(dataRec);           
+                    console.log(dataRec.current_user_url);
+                    console.log(dataRec.emails_url);
+                    console.log(dataRec.current_user_url);
+                    console.log(dataRec.emojis_url);
+                    console.log(dataRec.followers_url);
+                    
+                };         
+                //send request
+                httpReq.send();
+
+            }//callApi
 
 
             function dataServ() {
 
                 //for toggle grab handle
                 var testa = document.getElementById('enterData');
-                console.log(testa);
+                //console.log(testa);
                 //grab output handle
                 var one = document.getElementById('output');
-
-
 
                 var data = parseInt(testa.style.opacity); //equals 1 from opacity
 
                 //testa style set to 1 in CSS 
                 if (data == 0) {
-                    console.log('im here 2');
+                    //console.log('im here 2');
                     //grab one handle and change innerHTMl again
                     one.innerHTML = "<div id='output'>server returned data</div>";
                     //testa lights back on
                     testa.style.position = "";
+                    testa.style.paddingBottom = "";
                     testa.style.opacity = 1;
                     testa.style.top = "";
 
-
                 } //if
-
                 //allora next click comes this way
                 else {
-
-                    console.log('im here 1');
+                    //console.log('im here 1');
                     //change innerHTML
                     one.innerHTML = "<h4 class='traffic'>Data it's on the way! Lots of traffic at the moment..</h4>";
                     //turn off the opacity before u leave the room
                     testa.style.position = "absolute";
                     testa.style.top = "5000px";
-                    //otherwise when top 5000px is on, footer goes wild
                     testa.style.marginTop = "-5000px";
                     //turn off lights before leaving
                     testa.style.opacity = 0;
-                    console.log('no im here damn it!');
+                    //console.log('no im here damn it!');
 
-                }
-
-
+                }//else
+                
+                //making it fun and calling it from another function.   
+                //regardless call api 
+                apiCall();
 
             } //dataServ
 
