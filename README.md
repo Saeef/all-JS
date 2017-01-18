@@ -36,6 +36,14 @@
  ![js2](images/js4.png?raw=true "mobile" target="_blank")
  
  
+ 
+ <hr />  
+<br />
+  
+ <kbd>ajax2</kbd> :mag:
+ ![aJax2](images/ajax2.png?raw=true "mobile" target="_blank")
+ 
+ 
   
 
 
