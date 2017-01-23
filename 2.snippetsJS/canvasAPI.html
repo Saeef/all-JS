@@ -31,40 +31,41 @@
 				height: 100%;
 				}
 
+			.main {
+				margin:2em 0;
+			}	
 			canvas {
 				outline: 5px solid #988563;
 			}
-
-
 		</style>	
 			
 		<script type="text/javascript">
-
+		debugger;
 			var canvas = null;		//800x500
 			var context = null; 	//800x500
-
 			//offscreen canvas
 			var bufferCanvas = null;   //800x500
 			var bufferCanvasCtx = null;   //rgba(225,180,100,.5) |orange
-
-			//flakes array
+			//bubble array
 			var bubbleArr = [];
-
-			//to animate each flake
+			console.log('bArray: ' + bubbleArr);
+			//to animate each bubble
 			var bubbleTimer = null;			//1
+			console.log('btimer: ' + bubbleTimer);
 
-			//keeps track of max amt flakes
+			
+			//keeps track of max amt bubble
 			var maxBubbles = 200;
 
 			//bubble constructor 
 			function Bubble() {
-
 				//random bubbles positioning from the top 0-1
 			    this.x = Math.round(Math.random() * context.canvas.width);
-			    console.log(this.x);
+			    console.log('this.x is: ' + this.x);
+			    
 			    //y axis initializes at -10
 			    this.y = -10;
-			    console.log(this.y);
+			    console.log('this.y is: ' + this.y);
 			    //wind property to add to x axis
 			    this.wind = Math.random();
 			    //to make each bubble come down at different speed
@@ -72,7 +73,6 @@
 			    //plus 1 cause can't have bubbles at 0 floating so random number
 			    //btw 1 and 6
 			    this.speed = Math.round(Math.random() * 5) + 1;
-
 			    //bubbles width | random number from 0 to 3 but can't have zero
 			    //so 3 to 5
 			    this.width = (Math.random() * 3) + 32;
@@ -91,11 +91,9 @@
 			bufferCanvas = document.createElement("canvas");
 			//ref/inst fo new elem
 			bufferCanvasCtx = bufferCanvas.getContext("2d");
-
 			//sets buffers new elem width/height equals to original canvas width/height
 			bufferCanvasCtx.canvas.width = context.canvas.width;
 			bufferCanvasCtx.canvas.height = context.canvas.height;
-
 			// set interval timer to add bubbles every 200 mls
 			bubbleTimer = setInterval(addBubble, 200);
 	
@@ -106,11 +104,14 @@
 			setInterval(animate, 30);
 		
 		}//init
-debugger;
+//debugger;
 			//everytime it gets called creates a new instance of bubble object and
 			//stores in bubbleArr
 			function addBubble() {
-			    
+
+				addToArr(new Bubble());
+			   
+
 			    //first time array should be empty,so creates new bubble
 			    function addToArr(obj) {
 			    	bubbleArr.push(obj);			//previously ha
@@ -118,30 +119,23 @@ debugger;
 			    	console.log(bubbleArr);			/* adds one bubble: 		
 			    										{ x:715,y:-10,wind:0.70,speed:1,width:33.87 }
 													*/
-
 			    }//addToArr
-
 			    //nowncheck bubbleArr length and if equals 200 cut it off
+
 			    if (bubbleArr.length == maxBubbles) {
 			        clearInterval(bubbleTimer);
-			    } else {
-			    	//call inner function to add new bubble
-			    	addToArr(new Bubble());
-			    }
+			    } 
 
+			   
 			    
 			    
     
 			}//addBubble function
-
-
-
 			//gets called every 30mls and calls Update(),then calls Draw();
 			function animate() {
 				Update();
 				Draw();
 			}
-
 			//moves all animated objects to the screen according to speed,wind..so on
 			//once all objects updated to new location, we call draw;
 			function Update() {
@@ -149,24 +143,36 @@ debugger;
 			    	//as they go down
 			    	//y less than canvas height | make sure hasn't reach bottom of canvas
                     if (bubbleArr[i].y < context.canvas.height) {
+                    	console.log("bubbleArr[i].y is: " + bubbleArr[i]);
+                    	console.log("context.canvas.height is: " + context.canvas.height)
                     	//update its position by adding speed n fall bit more
                         bubbleArr[i].y += bubbleArr[i].speed;
 
                         //if y is now greater than height of canvas, reset to top -5
-                        if (bubbleArr[i].y > context.canvas.height)
-                            bubbleArr[i].y += 5;
-                        //we add bit of wind so doesnt fall straight down
-                        //to x axis
-                        bubbleArr[i].x += bubbleArr[i].wind;
+                        if (bubbleArr[i].y > context.canvas.height) {
+                        	
+                        	console.log("context.canvas.height is: " + context.canvas.height);
+                            bubbleArr[i].y = -5;
+                            
+                        	//we add bit of wind so doesnt fall straight down
+                        	//to x axis
+	                        bubbleArr[i].x += bubbleArr[i].wind;
+	                        console.log(this.x);
+	                        //winding to the right side of the screen
+	                        //check to see if x position is now greater, if so reset to zero
+	                        if (bubbleArr[i].x > context.canvas.width) {
+	                        	
+	                        	console.log("context.canvas.width is: " + context.canvas.width);
+	                            bubbleArr[i].x = 0;
+	                        
+	                        }//if canvas.width
 
-                        //winding to the right side of the screen
-                        //check to see if x position is now greater, if so reset to zero
-                        if (bubbleArr[i].x > context.canvas.width)
-                            bubbleArr[i].x = 0;
-                    }
-			    }
+	                    
+	                    }//if canvas.height        	
+                    
+                    }//outer if statment canvas.height
+			    }//for loop
 			}//update
-
 			
 		//draw off-screen,copy-to-screen
 		function Draw(){
@@ -176,7 +182,7 @@ debugger;
 			//starts from the upperleft
 			bufferCanvasCtx.fillRect(0,0,bufferCanvasCtx.canvas.width, bufferCanvasCtx.canvas.height);
 			
-			//itirate across entire array
+			//loop entire array
 			for (var i = 0; i < bubbleArr.length; i++) {
 				//set buffercanvas to white
 			    bufferCanvasCtx.fillStyle = "white";
@@ -195,14 +201,16 @@ debugger;
 		
 		}//draw function
 	
-
 		</script>
 	</head>
 	<body style="margin:0 auto; width:800px; padding:0 1em;" onload="init()">
-		<canvas id="testCanvas" width="800" height="500">
-			Canvas not supported shows only when canvas not supported.<br/>
-			Please update your browser.
-		</canvas>
-	
+		<div class="main">
+
+				<canvas id="testCanvas" width="800" height="500">
+					Canvas not supported shows only when canvas not supported.<br/>
+					Please update your browser.
+				</canvas>
+
+		</div> <!--  end of div main  -->
 	</body>
 </html>
