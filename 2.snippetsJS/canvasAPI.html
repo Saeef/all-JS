@@ -1,0 +1,208 @@
+/*--------------------------------------------------------------------<br/>
+	****** The Square Bubble Show ****** <br/>
+	Look into Canvas API methods and functions cause you need to know
+	how to create canvas and draw to do this. I started first with a 
+	rectangle and end up no where. So check how to make a circle.
+	****** Double Buffering! ******
+	Unlike single buffering, where all the drawing happens directly 
+	on the screen/canvas, and where you may have to deal with minor
+	image issues or unwanted artifacts; double buffering, handles 
+	all of the images off the screen first. In situations where you 
+	may want to animate many little images simultaneoulsy, drawing off-
+	screen first is the recomended approach. <br/>
+	If you want to go from bottom to top, then change y position from zero
+	to 300 for example and make sure speed inside loop is negative(reverse).<br/>
+	Speed direction:positive.To go west iterate with minus 5 instead.<br/>
+
+
+----------------------------------------------------------------------------------	
+*/
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Canvas Test Using Double Buffering</title>
+		<style>
+			body {
+				margin: 0 auto;
+				width: 800px;
+				padding: 0 1em;
+				height: 100%;
+				}
+
+			canvas {
+				outline: 5px solid #988563;
+			}
+
+
+		</style>	
+			
+		<script type="text/javascript">
+
+			var canvas = null;		//800x500
+			var context = null; 	//800x500
+
+			//offscreen canvas
+			var bufferCanvas = null;   //800x500
+			var bufferCanvasCtx = null;   //rgba(225,180,100,.5) |orange
+
+			//flakes array
+			var bubbleArr = [];
+
+			//to animate each flake
+			var bubbleTimer = null;			//1
+
+			//keeps track of max amt flakes
+			var maxBubbles = 200;
+
+			//bubble constructor 
+			function Bubble() {
+
+				//random bubbles positioning from the top 0-1
+			    this.x = Math.round(Math.random() * context.canvas.width);
+			    console.log(this.x);
+			    //y axis initializes at -10
+			    this.y = -10;
+			    console.log(this.y);
+			    //wind property to add to x axis
+			    this.wind = Math.random();
+			    //to make each bubble come down at different speed
+			    //so a random number from 0 to 1 times 5
+			    //plus 1 cause can't have bubbles at 0 floating so random number
+			    //btw 1 and 6
+			    this.speed = Math.round(Math.random() * 5) + 1;
+
+			    //bubbles width | random number from 0 to 3 but can't have zero
+			    //so 3 to 5
+			    this.width = (Math.random() * 3) + 32;
+			    //makes bubbles square not good!
+			    this.height = this.width;
+			}
+			
+		//on doc loaded
+		function init() {
+			//handle dom
+			canvas = document.getElementById('testCanvas');
+			//ref/inst
+			context = canvas.getContext("2d");
+			
+			//create new elem based on canvas
+			bufferCanvas = document.createElement("canvas");
+			//ref/inst fo new elem
+			bufferCanvasCtx = bufferCanvas.getContext("2d");
+
+			//sets buffers new elem width/height equals to original canvas width/height
+			bufferCanvasCtx.canvas.width = context.canvas.width;
+			bufferCanvasCtx.canvas.height = context.canvas.height;
+
+			// set interval timer to add bubbles every 200 mls
+			bubbleTimer = setInterval(addBubble, 200);
+	
+			//draws initial setting	
+			Draw();
+			
+			//gets called every 30 mls
+			setInterval(animate, 30);
+		
+		}//init
+debugger;
+			//everytime it gets called creates a new instance of bubble object and
+			//stores in bubbleArr
+			function addBubble() {
+			    
+			    //first time array should be empty,so creates new bubble
+			    function addToArr(obj) {
+			    	bubbleArr.push(obj);			//previously ha
+			    	console.log(obj);  				//x:715,y:-10
+			    	console.log(bubbleArr);			/* adds one bubble: 		
+			    										{ x:715,y:-10,wind:0.70,speed:1,width:33.87 }
+													*/
+
+			    }//addToArr
+
+			    //nowncheck bubbleArr length and if equals 200 cut it off
+			    if (bubbleArr.length == maxBubbles) {
+			        clearInterval(bubbleTimer);
+			    } else {
+			    	//call inner function to add new bubble
+			    	addToArr(new Bubble());
+			    }
+
+			    
+			    
+    
+			}//addBubble function
+
+
+
+			//gets called every 30mls and calls Update(),then calls Draw();
+			function animate() {
+				Update();
+				Draw();
+			}
+
+			//moves all animated objects to the screen according to speed,wind..so on
+			//once all objects updated to new location, we call draw;
+			function Update() {
+			    for (var i = 0; i < bubbleArr.length; i++) {
+			    	//as they go down
+			    	//y less than canvas height | make sure hasn't reach bottom of canvas
+                    if (bubbleArr[i].y < context.canvas.height) {
+                    	//update its position by adding speed n fall bit more
+                        bubbleArr[i].y += bubbleArr[i].speed;
+
+                        //if y is now greater than height of canvas, reset to top -5
+                        if (bubbleArr[i].y > context.canvas.height)
+                            bubbleArr[i].y += 5;
+                        //we add bit of wind so doesnt fall straight down
+                        //to x axis
+                        bubbleArr[i].x += bubbleArr[i].wind;
+
+                        //winding to the right side of the screen
+                        //check to see if x position is now greater, if so reset to zero
+                        if (bubbleArr[i].x > context.canvas.width)
+                            bubbleArr[i].x = 0;
+                    }
+			    }
+			}//update
+
+			
+		//draw off-screen,copy-to-screen
+		function Draw(){
+			
+			//draw away
+			bufferCanvasCtx.fillStyle = "rgba(225,180,100,.5)";  //orange
+			//starts from the upperleft
+			bufferCanvasCtx.fillRect(0,0,bufferCanvasCtx.canvas.width, bufferCanvasCtx.canvas.height);
+			
+			//itirate across entire array
+			for (var i = 0; i < bubbleArr.length; i++) {
+				//set buffercanvas to white
+			    bufferCanvasCtx.fillStyle = "white";
+			    //fill rects ? problem!
+			    bufferCanvasCtx.fillRect(
+			    	bubbleArr[i].x,
+			    	bubbleArr[i].y,
+			    	bubbleArr[i].width,
+			    	bubbleArr[i].height
+			    );//fillrect
+			}//for loop
+			
+			//drawImage to copy bufferCanvas
+			context.drawImage(bufferCanvas,0,0,bufferCanvas.width, bufferCanvas.height);
+			
+		
+		}//draw function
+	
+
+		</script>
+	</head>
+	<body style="margin:0 auto; width:800px; padding:0 1em;" onload="init()">
+		<canvas id="testCanvas" width="800" height="500">
+			Canvas not supported shows only when canvas not supported.<br/>
+			Please update your browser.
+		</canvas>
+	
+	</body>
+</html>
