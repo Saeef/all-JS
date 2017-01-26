@@ -40,8 +40,8 @@
 <kbd>thePropagationShow2</kbd> :mag:
  ![events](images/propashow2.png?raw=true "mobile" target="_blank")
 
-
-
+<br>
+<hr>
 
  <KBD>OddEven</KBD> 
  ![evenOrOdd](images/EvenOrOdd.png?raw=true "mobile" target="_blank")
