@@ -30,6 +30,19 @@
 <br />
 
 
+ <hr />  
+<br />
+  
+ <kbd>thePropagationShow1</kbd> :mag:
+ ![events](images/propashow1.png?raw=true "mobile" target="_blank")
+
+
+<kbd>thePropagationShow2</kbd> :mag:
+ ![events](images/propashow2.png?raw=true "mobile" target="_blank")
+
+
+
+
  <KBD>OddEven</KBD> 
  ![evenOrOdd](images/EvenOrOdd.png?raw=true "mobile" target="_blank")
  
@@ -106,4 +119,6 @@
   
  <kbd>canvasAPI</kbd> :mag:
  ![canvasAPI](images/canvas.png?raw=true "mobile" target="_blank")
+ 
+ 
  
