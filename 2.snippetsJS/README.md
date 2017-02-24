@@ -122,3 +122,12 @@
  
  
  
+ <hr />  
+<br />
+  
+ <kbd>moonCut canvas</kbd> :mag:
+ ![canvasAPI](images/moonCut.png?raw=true "mobile" target="_blank")
+ 
+ 
+ 
+ 
