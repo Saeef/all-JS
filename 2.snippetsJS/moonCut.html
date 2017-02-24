@@ -1,0 +1,234 @@
+/*--------------------------------------------------------------------<br/>
+	****** Double Buffering! ******
+	Unlike single buffering, where all the drawing happens directly 
+	on the screen/canvas, and where you may have to deal with minor
+	image issues or unwanted artifacts; double buffering, handles 
+	all of the images off the screen first. In situations where you 
+	may want to animate many little images simultaneoulsy, drawing off-
+	screen first is the recomended approach.
+
+----------------------------------------------------------------------------------	
+*/
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Canvas Double Buffering</title>
+		<style>
+			body {
+				margin: 0 auto;
+				    width: 800px;
+				    padding: 0 1em;
+				    box-shadow: -2px 7px 8px 16px rgba(0, 0, 0, 0.12);
+				}
+
+
+		</style>	
+			
+		<script type="text/javascript">
+
+			var canvas = null;
+			var context = null;
+			var centerX = null;
+			var centerY = null;
+			var radius = null;
+
+			//offscreen canvas
+			var bufferCanvas = null;
+			var bufferCanvasCtx = null;
+
+			//flakes array
+			var flakeArray = [];
+
+			//to animate each flake
+			var flakeTimer = null;
+
+			//keeps track of max amt flakes
+			var maxFlakes = 200;
+
+			//flake constructor ///each flake has x,y position
+			function Flake() {
+				//x axis distribute randomly |random returns number btw 0 & 1
+			    this.x = Math.round(Math.random() * context.canvas.width);
+			    //y axis initializes at -10
+			    this.y = -10;
+			    //wind property to add to x axis
+			    this.wind = Math.random();
+			    //to make each flake come down at different speed
+			    //so a random number from 0 to 1 times 5
+			    //plus 1 cause can't have flakes at 0 floating so random number
+			    //btw 1 and 6
+			    this.speed = Math.round(Math.random() * 5) + 2;
+
+			    //this.radius = 50;
+			    //this.startAng = 0;
+			    //this.endAng = Math.PI*2;
+
+			    //flakes width | random number from 0 to 3 but can't have zero
+			    //so 3 to 5
+			    this.width = (Math.random() * 3) + 15;
+			    //i need this rounded
+			    this.height = (this.width-7)*2;
+
+		}//flake const
+
+
+
+			   
+			
+		//on doc loaded
+		function init() {
+
+			//handle dom
+			canvas = document.getElementById('testCanvas');
+			//ref/inst
+			context = canvas.getContext("2d");
+			centerX = canvas.width /2;
+			centerY = canvas.height /2;
+			radius = 70;
+
+			context.beginPath();
+			context.arc(
+				centerX,
+				centerY,
+				radius,
+				0,2*Math.PI,
+				false
+				);
+			context.fillStyle = "black";
+			context.fill();
+
+			//create new elem based on canvas
+			bufferCanvas = document.createElement("canvas");
+			//ref/inst fo new elem
+			bufferCanvasCtx = bufferCanvas.getContext("2d");
+			bufferCanvasCtx.beginPath();
+			bufferCanvasCtx.arc(
+				centerX,
+				centerY,
+				radius,
+				0,2*Math.PI,
+				false
+				);
+			bufferCanvasCtx.fillStyle = 'green';
+			bufferCanvasCtx.fill();
+
+			//buffers new width and height same as original canvas already in page
+			bufferCanvasCtx.canvas.width = context.canvas.width;
+			bufferCanvasCtx.canvas.height = context.canvas.height;
+
+
+
+			// set interval timer to add snowflakes every 200 mls
+			flakeTimer = setInterval(addFlake, 200);
+	
+			//draws initial setting	
+			Draw();
+			
+			//gets called every 30 mls
+			setInterval(animate, 30);
+		
+		}//init
+
+		//new instance and added to array
+		function addFlake() {
+	
+		    function addArr(obj) {
+		    	flakeArray.push(obj);
+		    	//console.log(flakeArray);
+		    }//addArr
+
+		    addArr(new Flake());
+
+		    //if flakes equals max clear interval,stop timer
+		    if (flakeArray.length == maxFlakes) {
+		        clearInterval(flakeTimer);
+		    }//if max
+		
+
+		}//addFlake
+
+			//called inside draw function
+			function blank() {
+				//draws purple background
+				bufferCanvasCtx.fillStyle = "#0c47bc";
+				//filling bufferCanvas, starting upperleft and finishing lower right
+				bufferCanvasCtx.fillRect(0,0,bufferCanvasCtx.canvas.width, bufferCanvasCtx.canvas.height);
+				
+					//now we go back to draw and draw snowflake	
+			}//blank
+
+			//gets called every 30mls and calls Update(),then calls Draw();
+			function animate() {
+				Update();
+				Draw();
+			}
+
+			//moves all animated objects to the screen according to speed,wind..so on
+			//once all objects updated to new location, we call draw;
+			function Update() {
+			    for (var i = 0; i < flakeArray.length; i++) {
+			    	//as they go down
+			    	//y less than canvas height | make sure hasn't reach bottom of canvas
+                    if (flakeArray[i].y < context.canvas.height) {
+                    	//update its position by adding speed n fall bit more
+                        flakeArray[i].y += flakeArray[i].speed;
+
+                        //if y is now greater than height of canvas, reset to top -5
+                        if (flakeArray[i].y > context.canvas.height)
+                            flakeArray[i].y = -5;
+                        //we add bit of wind so doesnt fall straight down
+                        //to x axis
+                        flakeArray[i].x += flakeArray[i].wind;
+
+                        //winding to the right side of the screen
+                        //check to see if x position is now greater, if so reset to zero
+                        if (flakeArray[i].x > context.canvas.width)
+                            flakeArray[i].x = 0;
+                    }
+			    }
+			}//update
+
+			//when update completes means all flakes have been moved to their new position and is now time for Draw function to run and draw everything
+			
+			//copies contents of buffercanvas to screen
+			function Draw(){
+				context.save();
+
+				// create a clipping region
+				bufferCanvasCtx.beginPath();
+				bufferCanvasCtx.fillStyle="rgba(36, 151, 223, 0.95)";
+				bufferCanvasCtx.fillRect(0,0,bufferCanvas.width,bufferCanvas.height);
+				//rounds
+				bufferCanvasCtx.arc(bufferCanvas.width/2,bufferCanvas.height/2,bufferCanvas.height/3,0,15);   //2*Math.PI)
+				//cuts moon
+				bufferCanvasCtx.clip();
+
+				//Draw function starts here
+				blank();
+
+				//comeback here to iterate through this loop that goes
+				//across entire snowflake array
+				for (var i = 0; i < flakeArray.length; i++) {
+					//set buffercanvas to white
+				    bufferCanvasCtx.fillStyle = "#fffb01";
+				    //fill rects
+				    bufferCanvasCtx.fillRect(flakeArray[i].x,flakeArray[i].y,flakeArray[i].width,flakeArray[i].height);
+				}
+				
+				//once drawn everything to buffercanvas:
+				// copy the entire rendered image(frame) from the buffer canvas to the 
+				// one currently on the screen.
+				// use drawImage to copy buffercanvas
+				context.drawImage(bufferCanvas, 0,0,bufferCanvas.width, bufferCanvas.height);
+				context.restore();
+			}
+		</script>
+	</head>
+	<body style="margin:0 auto; width:800px; padding:0 1em;" onload="init()">
+		<canvas id="testCanvas" width="800" height="800">
+			Canvas not supported
+		</canvas>
+	</body>
+</html>
