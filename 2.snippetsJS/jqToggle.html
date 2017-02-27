@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Toggle</title>
+<script src="jquery.js"></script>
+<style type="text/css">
+.wrapper {
+  width: 900px;
+  margin:0 auto;
+  margin-top: 2em;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+input {
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  margin-right: 1em;
+}
+
+.highlight {
+	background-color: #fcff83;
+}
+.highlight2 {
+	background-color: #fb302f;
+}
+
+.buttonhighlight {
+	background-color: #0180de;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+</style>
+
+</head>
+<body>
+<div class="wrapper">
+<table width="75%" border="1" align="center">
+  <tr>
+    <th>First Name</th>
+    <th>Middle Name</th>
+    <th>Last Name</th>
+  </tr>
+  <tr>
+    <td><div align="center">John</div></td>
+    <td><div align="center">A</div></td>
+    <td><div align="center">Clinton</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">Mark</div></td>
+    <td><div align="center">T</div></td>
+    <td><div align="center">Bush</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">Orenthal</div></td>
+    <td><div align="center">J</div></td>
+    <td><div align="center">Simpson</div></td>
+  </tr>
+  
+  <tr>
+    <td><div align="center">Jennifer</div></td>
+    <td><div align="center">L</div></td>
+    <td><div align="center">Franzini</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">Mario</div></td>
+    <td><div align="center">R</div></td>
+    <td><div align="center">Brothers</div></td>
+  </tr>
+</table>
+<p align="center">
+  <input type="button" name="headerHL" id="headerHL" value="Highlight Headers" /> 
+  <input type="button" name="rowHL" id="rowHL" value="Highlight Odd Rows" />
+</p>
+</div>   <!--  end of div wrapper   -->    
+</body>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#headerHL').toggle(function() {
+    $('th').addClass('highlight');
+	$('#headerHL').addClass('buttonhighlight');
+  }, function() {
+    $('th').removeClass('highlight');
+	$('#headerHL').removeClass('buttonhighlight');
+  });
+
+  $('#rowHL').toggle(function() {
+    $('tr:odd').addClass('highlight2');
+	$('#rowHL').addClass('buttonhighlight');
+  }, function() {
+    $('tr:odd').removeClass('highlight2');
+	$('#rowHL').removeClass('buttonhighlight');
+  });
+});
+
+</script>
+</html>
