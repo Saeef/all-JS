@@ -130,4 +130,11 @@
  
  
  
+ <hr />  
+<br />
+  
+ <kbd>toggle jquery</kbd> :mag:
+ ![toggleJQuery](images/toggleJQuery.png?raw=true "mobile" target="_blank")
+ 
+ 
  
