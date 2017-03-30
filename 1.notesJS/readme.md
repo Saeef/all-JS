@@ -5,4 +5,4 @@
 
  
 
- ![js2](images/js.jpg?raw=true "mobile" target="_blank")
+ ![js2](images/js.jpg)
