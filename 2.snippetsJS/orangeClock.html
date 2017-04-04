@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS + CSS Clock</title>
+</head>
+<body>
+<div class="clock">
+  <div class="clock-face">
+    <div class="hand hour-hand"></div>
+    <div class="hand min-hand"></div>
+    <div class="hand second-hand"></div>
+  </div>
+</div>
+<style>
+  html {
+    background:#f42;
+    background-size:cover;
+    font-family:'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+  }
+  body {
+    margin: 0;
+    font-size: 2rem;
+    display:flex;
+    flex:1;
+    min-height: 100vh;
+    align-items: center;
+  }
+  .clock {
+    background: white;
+    width: 30rem;
+    height: 30rem;
+    border:20px solid #333;
+    border-radius:50%;
+    margin:50px auto;
+    position: relative;
+    padding:2rem;
+  }
+  .clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+  }
+  .hand {
+    height:6px;
+    position: absolute;
+    top:50%;
+    transform-origin: 100%;
+    border-radius: 4px;
+    transition: transform 1s linear;
+  }
+  .hour-hand {
+    width:35%;
+    margin-left: 15%;
+    background:black;
+  }
+  .min-hand {
+    width:40%;
+    margin-left: 10%;
+    background:black;
+  }
+  .second-hand {
+    width:50%;
+    background: #fd0;
+  }
+</style>
+<script>
+  class Clock {
+    constructor (now) {
+      this.frame = 0;
+      this.initialHourPos = (now.getHours() / 12 * 360) + 90;
+      this.initialMinPos = (now.getMinutes() / 60 * 360) + 90;
+      this.initialSecPos = (now.getSeconds() / 60 * 360) + 90;
+      this.hourHand = document.querySelector('.hour-hand');
+      this.minuteHand = document.querySelector('.min-hand');
+      this.secondHand = document.querySelector('.second-hand');
+      this.render(this.initialHourPos, this.initialMinPos, this.initialSecPos);
+    }
+    updatePosition(now) {
+      this.frame++;
+      this.hourDegrees = this.initialHourPos + ((this.frame / 60 / 60) / 12 * 360);
+      this.minDegrees = this.initialMinPos + ((this.frame / 60) / 60 * 360);
+      this.secDegrees = this.initialSecPos + (this.frame / 60 * 360);
+      this.render(this.hourDegrees, this.minDegrees, this.secDegrees);
+    }
+    render(hourPos, minPos, secPos) {
+      this.hourHand.style.transform = `rotate(${hourPos}deg)`;
+      this.minuteHand.style.transform = `rotate(${minPos}deg)`;
+      this.secondHand.style.transform = `rotate(${secPos}deg)`;
+    }
+  }
+  clock = new Clock(new Date);
+  setInterval(() => clock.updatePosition(new Date), 1000);
+</script>
+</body>
+</html>
