@@ -22,7 +22,7 @@
  
  
  <KBD>progressBar</KBD>
- ![progressBar](images/progressBar.png "mobile" target="_blank")
+ ![progressBar](images/progressBar.png "mobile")
  
 
  
@@ -34,17 +34,17 @@
 <br />
   
  <kbd>thePropagationShow1</kbd> :mag:
- ![events](images/propashow1.png?raw=true "mobile" target="_blank")
+ ![events](images/propashow1.png)
 
 
 <kbd>thePropagationShow2</kbd> :mag:
- ![events](images/propashow2.png "mobile" target="_blank")
+ ![events](images/propashow2.png)
 
 <br>
 <hr>
 
  <KBD>OddEven</KBD> 
- ![evenOrOdd](images/EvenOrOdd.png "mobile" target="_blank")
+ ![evenOrOdd](images/EvenOrOdd.png)
  
  
  
@@ -55,7 +55,7 @@
   
   
  <KBD>switch_case,_if_statement,_date_object</KBD>
- ![switch case](images/greeting.png "mobile" target="_blank")
+ ![switch case](images/greeting.png)
  
  
  <hr />  
@@ -65,7 +65,7 @@
 
   
  <KBD>arrays:push,_shift,_unshift,_pop,_splice</KBD> 
- ![array methods](images/array-methods.png "mobile" target="_blank")
+ ![array methods](images/array-methods.png)
  
  
  
@@ -74,28 +74,28 @@
 <br />
   
  <kbd>clock</kbd> 
- ![clock](images/clock.png "mobile" target="_blank")
+ ![clock](images/clock.png "mobile")
  
  
  <hr />  
 <br />
   
  <kbd>popup window</kbd> 
- ![popup window](images/popupwindow.png "mobile" target="_blank")
+ ![popup window](images/popupwindow.png)
  
  
  <hr />  
 <br />
   
  <kbd>bubbling phase - mouseover event</kbd> 
- ![bubbling phase - mouseover](images/bubblingphase.png "mobile" target="_blank")
+ ![bubbling phase - mouseover](images/bubblingphase.png)
  
  
  <hr />  
 <br />
   
  <kbd>bubbling phase - mouseover event</kbd> 
- ![bubbling phase - mouseover](images/mouseover.png?raw=true "mobile" target="_blank")
+ ![bubbling phase - mouseover](images/mouseover.png)
  
  
  
@@ -103,14 +103,14 @@
 <br />
   
  <kbd>jsonAjax</kbd> 
- ![jsonajax](images/jsonAjax.png?raw=true "mobile" target="_blank")
+ ![jsonajax](images/jsonAjax.png)
  
  
  <hr />  
 <br />
   
  <kbd>ajax2</kbd> :mag:
- ![aJax2](images/ajax2.png "mobile" target="_blank")
+ ![aJax2](images/ajax2.png)
  
  
  
@@ -118,7 +118,7 @@
 <br />
   
  <kbd>canvasAPI</kbd> :mag:
- ![canvasAPI](images/canvas.png "mobile" target="_blank")
+ ![canvasAPI](images/canvas.png)
  
  
  
@@ -126,7 +126,7 @@
 <br />
   
  <kbd>moonCut canvas</kbd> :mag:
- ![canvasAPI](images/moonCut.png "mobile" target="_blank")
+ ![canvasAPI](images/moonCut.png)
  
  
  
@@ -134,13 +134,13 @@
 <br />
   
  <kbd>toggle jquery</kbd> :mag:
- ![toggleJQuery](images/toggleJQuery.png "mobile" target="_blank")
+ ![toggleJQuery](images/toggleJQuery.png)
  
  
   <hr />  
 <br />
   
  <kbd>orange clock</kbd> :mag:
- ![toggleJQuery](images/orangeClock.png "mobile" target="_blank")
+ ![toggleJQuery](images/orangeClock.png)
  
  
