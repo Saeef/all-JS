@@ -137,4 +137,10 @@
  ![toggleJQuery](images/toggleJQuery.png?raw=true "mobile" target="_blank")
  
  
+  <hr />  
+<br />
+  
+ <kbd>toggle jquery</kbd> :mag:
+ ![toggleJQuery](images/orangeClock.png "mobile" target="_blank")
+ 
  
