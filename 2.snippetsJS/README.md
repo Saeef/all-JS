@@ -13,7 +13,7 @@
 <br />
   
  <KBD>nanoProgressBar</KBD>
- ![nanoProgressBar](images/nanoProgressBar.png "mobile" target="_blank")
+ ![nanoProgressBar](images/nanoProgressBar.png)
 
 
 
