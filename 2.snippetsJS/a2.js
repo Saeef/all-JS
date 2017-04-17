@@ -11,8 +11,8 @@
             this.tabUpdate();
             this.sixOne();
             this.sixTwo();
-            this.feature();
-            this.rowpic();
+            this.featured();
+            this.rowPic();
             this.rowText();
             this.bottone();
             this.footerTop();
@@ -251,7 +251,7 @@
             handler.parentNode.insertBefore(main, handler);
             //12-6-6
             var ta = document.querySelectorAll('.hays-tabs')[0];
-            taClone = ta.cloneNode(true);
+            var taClone = ta.cloneNode(true);
             var handlerq = document.getElementById('popularLeft');
             handlerq.appendChild(taClone);
         }, //°•······ ›secondRow ¬¬ °
@@ -542,14 +542,14 @@
             rem2.parentElement.removeChild(rem2);
             var rem3 = document.querySelectorAll('.col.col-3.last')[2];
             setTimeout(function() {
-                if(rem3) {
+                if (rem3) {
                     rem3.parentElement.removeChild(rem3);
                 }
 
-            },300);
+            }, 300);
 
-            
-            var rowe = document.querySelectorAll('.row')[6];   //row
+
+            var rowe = document.querySelectorAll('.row')[6]; //row
             var fb = document.getElementById('footerb');
             //clone
             var clo = fb.cloneNode(true);
@@ -559,7 +559,7 @@
             var fo = document.getElementById('footer-bottom');
             var foot = document.getElementsByClassName('full-width-container');
             var footer = foot[1];
-            footer.insertBefore(clo,fo);
+            footer.insertBefore(clo, fo);
 
             //button for panel
             var buttone = document.createElement('button');
@@ -570,17 +570,44 @@
             var popu = document.getElementById('popularLeft');
             popu.appendChild(buttone);
 
+            var button1 = document.createElement('button');
+            button1.textContent = "Search all x jobs";
+           
+            button1.className = "bhay twosee search";
+            //handle
+            var popu = document.getElementById('popularLeft');
+            popu.appendChild(button1);
+
+            var button2 = document.createElement('button');
+            button2.textContent = "Search all x jobs";
+            
+            button2.className = "bhay threesee search";
+            //handle
+            var popu = document.getElementById('popularLeft');
+            popu.appendChild(button2);
+
+            //whatotoins
+            var intro = document.createElement('p');
+            intro.innerHTML = 'We are Hays, the world\'s leading recruitment experts. Every 3 minutes a Hays candidate starts their new job. Click on the below links to see the latest job vacancies for each category.';
+
+            //right pannel intro
+            var ho = document.querySelectorAll('.box.expandable-in-mobile')[0];
+            //h3
+            var ti = ho.children[0];
+            ho.insertBefore(intro, ti.nextSibling);
+
             //bone
-            var one = document.querySelectorAll('.bhay.onesee')[1];
-            one.innerHTML = "<a class='bet' href='#'>Send your CV<img src='#' class='liimg'></a>";
+            var one = document.querySelectorAll('.bhay.onesee')[0];
+            one.innerHTML = "<a class='bet' href='#'><span class='icon-glyph-11'>Send your CV</span></a>";
             var two = document.querySelectorAll('.bhay.twosee')[0];
-            two.innerHTML = "<a class='bet' href='#'>Office locator<img src='#' class='liimg'></a>";
+            two.innerHTML = "<a class='bet' href='#'><span class='icon-glyph-5'>Office locator</span></a>";
             var tre = document.querySelectorAll('.bhay.threesee')[0];
-            tre.innerHTML = "<a class='bet' href='#'>Browse by expertise<img src='#' class='liimg'></a>";
-        
+            tre.innerHTML = "<a class='bet' href='#'>Browse by expertise</a>";
+
             //num of jobs
             var jobs = document.getElementById('searchbe');
             jobs.innerHTML = "<script>\r\nvar value1  = \"\";\r\nfunction parseXml(xml) {\r\nvalue1 = $(xml).find(\"M\").text();\r\nif(value1){\r\ndocument.getElementById(\'googleJobs\').innerHTML = document.getElementById(\'googleJobs\').innerHTML.replace(\"*\",value1);\r\n$(\"#googleJobs\").show();\r\n}\r\n} \r\nfunction getData(){\r\nif (window.jQuery && jQuery.ui && jQuery.isReady) {\r\n$.ajax({\r\ntype: \"GET\",\r\nasync: false,\r\nurl: \"\/search?q=&locationToSearch=&partialfields=(xSpecialism:AccFin|xSubSpecialism:AccFin)&contentType=Jobs&level=&location_id=&ne_longitude=&ne_latitude=&site=IRE_SANGAM_JOBS_COLL&proxyreload=0&filter=0&btnG=Search&client=sangam_frontend_en&getfields=*&entsp=hays_policy&oe=UTF-8&exclude_apps=1&ud=1&siteLocale=en-GB&domainId=1&requiredfields=xlocale:en-GB&sort=date:D:L:d1&call=viewJobsCountBtn\",\r\ndataType: \"xml\",\r\nsuccess: parseXml\r\n});\r\n}\r\nelse\r\n window.setTimeout(getData,50);\r\n }\r\n getData(); \r\n</script><a class='btn' id='googleJobs' style='' href='https://m.hays.co.uk/search/?q=hays&amp;s=%2BxReleaseDate&amp;specialismId=AccFin&amp;subSpecialismId='>View all 4100 jobs</a>";
+           
         }, //°•······ ›housekeeping ¬¬ °
 
         preloaderOff: function() {
