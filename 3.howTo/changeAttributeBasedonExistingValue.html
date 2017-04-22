@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type='text/javascript'>
+/*
+change the value of href from tom to mike
+*/
+
+window.onload=function(){
+    var tags = document.getElementsByTagName("a");
+    for(var i = 0, lentags = tags.length; i < lentags; i++) {
+        tags[i].href = tags[i].href.replace('.tom', '.mike');
+    }
+}
+</script>
+</head>
+<body>
+	<ul>
+	<li><a href="home.tom">change 1</a></li>
+	<li><a href="contact.tom">change 2</a></li>
+	<li><a href="about.tom">change 3</a></li>
+	</ul>
+</body>
+</html>
