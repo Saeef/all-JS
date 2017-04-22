@@ -1,7 +1,7 @@
 /*
-How to add an Id through setAttributeNode  :boom:
+How to add an Id through setAttributeNode :collision:
 
-*/  :boom:
+*/  :collision:
 
 //create an id
 var id = document.getElementById('id');
