@@ -88,3 +88,45 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
 }); //eventListener
 
+
+
+/*
+*
+*     index.html
+*     ----------  
+*/
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <script type="text/javascript" src="ajax-util.js"></script>
+   <script type="text/javascript" src="script.js"></script>
+   <title>Practice test</title>
+</head>
+<body>
+   <h1 id="title">ajax test</h1>
+
+   <p>
+      <button>
+         Say hello to someone on the Server!
+      </button>
+   </p>
+
+   <div id="content">
+      
+   </div>
+   
+</body>
+</html>
+
+
+/*
+*
+*     data.txt
+*     ----------  
+*/
+
+      whatever or stefano
+
