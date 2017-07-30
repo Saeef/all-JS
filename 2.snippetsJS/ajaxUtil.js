@@ -68,26 +68,26 @@ document.addEventListener('DOMContentLoaded', function(e) {
    //unobstrusive event binding
    document.querySelector('button').
    addEventListener('click', function() {
-      var self = this;
-      var name = "";
 
       //call server to get name
       $ajaxUtil
          .sendGetRequest('/name.txt',
             function(request) {
-               self.name = request.responseText;
+               var name = request.responseText;
+
+               document.querySelector('#content')
+              .innerHTML = "<h2>Hello " + name + "!";
+            
+
             });
 
-      document.querySelector('#content')
-              .innerHTML = "<h2>Hello " +
-                           self.name + "!";
+      
 
 
    }); //eventListener
 
 
 }); //eventListener
-
 
 
 /*
