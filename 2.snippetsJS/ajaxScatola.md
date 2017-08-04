@@ -1,7 +1,7 @@
 (function(global) {
 
 //namespace to attach things to global
-var ajaxUtil = {};
+var ajaxScatola = {};
 
 //return HTTP Request Obj/ not avail to global
 function getRequestObject() {
@@ -19,10 +19,8 @@ function getRequestObject() {
 
 }//getRequestObject
 
-
 //Ajax GET request 
-ajaxUtil.sendGetRequest = 
-   function(requestUrl, responseHandler) {
+ajaxUtil.sendGetRequest = function(requestUrl, responseHandler) {
       //get request obj
       var request = getRequestObject();
       //onreadystate - when server comesback with response we call handleResponse
@@ -33,7 +31,7 @@ ajaxUtil.sendGetRequest =
          //then open GET
          request.open("GET", requestUrl, true);
          request.send(null);  //for POST only
-   };//fn
+};//fn
 
 
 //Only calls user provided responseHandler
@@ -43,16 +41,61 @@ function handleResponse(request, responseHandler) {
       responseHandler(request);
    }//if
 }//fn
-
+ 
 
 //Expose utility to global object ot use it
-global.$ajaxUtil = ajaxUtil;
-
+global.FacingOutAjax = ajaxScatola;
 
 
 
 })(window);
 
+
+/*
+·················
+···············
+·············
+···········
+··········
+·········
+·················∏∏∏∏
+·················∏◊◊∏=»»»‹Œ—°
+·················∏∏∏∏
+·········
+··········
+···········
+·············
+···············
+·················
+
+
+
+*/
+
+
+//Event handler
+document.addEventListener('DOMContentLoaded', function(e) {
+   //unobstrusive event binding
+   document.querySelector('button').
+   addEventListener('click', function() {
+
+      //call server to get name
+      FacingOutAjax
+         .sendGetRequest('name.txt',
+            function(request) {
+               var name = request.responseText;
+
+               document.querySelector('#content')
+              .innerHTML = "<h2>Hello " + name + "!";
+            
+
+            });
+
+
+   }); //click event
+
+
+}); //DOMContentLoaded
 
 
 
