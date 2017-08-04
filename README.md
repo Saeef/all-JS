@@ -1,14 +1,13 @@
-## :construction:&nbsp; old <kbd>REPO</kbd>, new <kbd>REPO</kbd> Merged&nbsp;&nbsp;  :construction:
-
-## :one: <kbd>JS</kbd> notes and    (:rocket: best javascript notes! <kbd>JS</kbd>&nbsp;:coffee: &nbsp;)     
+## :one: <kbd>BEST JS NOTES!</kbd> by me.  :rocket: &nbsp;:coffee:  
 ## :two: new <kbd>JS</kbd> snippets <kbd>LIB</kbd> in progress
 
 > (new notes part of a 5 modules JavaScript course taken online from the University of Chicago, Illinois.)
 
 
-<br />
+
   
  <kbd>js</kbd> :mag:
+ <br>
  ![js1](images/JSU.png)
 
 
