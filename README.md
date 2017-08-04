@@ -1,5 +1,5 @@
-## :one: <kbd>BEST JS NOTES!</kbd> by me.  :rocket: &nbsp;:coffee:  
-## :two: new <kbd>JS</kbd> snippets <kbd>LIB</kbd> in progress
+## :one: <kbd>BEST JS NOTES!</kbd> all taken by me.   &nbsp;:coffee:  
+## :two: <kbd>JS</kbd> snippets <kbd>LIB</kbd> ongoing.. &nbsp;:rocket:
 
 > (new notes part of a 5 modules JavaScript course taken online from the University of Chicago, Illinois.)
 
