@@ -53,7 +53,7 @@ global.FacingOutAjax = ajaxScatola;
 })(window);
 
 
-/****************···self-exec fn/ or utility ends here.
+/****************···self-exec fn/ AKA utility ends here.
 ·················
 ···············
 ·············
