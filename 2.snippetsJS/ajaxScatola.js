@@ -11,16 +11,16 @@ function getRequestObject() {
    else if(window.ActiveXObject) {
       //old IE
       return new ActiveXObject("Microsoft.XMLHTTP");
-   }//else
+   }//else-if
    else {
       global.alert("Ajax is not supported");
       return null;
-   }
+   }//else
 
-}//getRequestObject
+}//getRequestObject fn
 
 //Ajax GET request 
-ajaxUtil.sendGetRequest = function(requestUrl, responseHandler) {
+ajaxScatola.sendGetRequest = function(requestUrl, responseHandler) {
       //get request obj
       var request = getRequestObject();
       //onreadystate - when server comesback with response we call handleResponse
@@ -28,10 +28,11 @@ ajaxUtil.sendGetRequest = function(requestUrl, responseHandler) {
          function() {
             handleResponse(request, responseHandler);
          };
-         //then open GET
-         request.open("GET", requestUrl, true);
-         request.send(null);  //for POST only
-};//fn
+      //then open GET
+      request.open("GET", requestUrl, true);
+      request.send(null);  //for POST only
+
+};//ajax GET request
 
 
 //Only calls user provided responseHandler
@@ -40,18 +41,19 @@ function handleResponse(request, responseHandler) {
       (request.satus == 200)) {
       responseHandler(request);
    }//if
-}//fn
+   
+}//handleResponse fn
  
 
 //Expose utility to global object ot use it
 global.FacingOutAjax = ajaxScatola;
 
-
-
+   
+   
 })(window);
 
 
-/*
+/****************···self-exec fn ended.
 ·················
 ···············
 ·············
@@ -67,9 +69,7 @@ global.FacingOutAjax = ajaxScatola;
 ·············
 ···············
 ·················
-
-
-
+******************···now-call-it
 */
 
 
@@ -95,14 +95,19 @@ document.addEventListener('DOMContentLoaded', function(e) {
    }); //click event
 
 
-}); //DOMContentLoaded
+}); //DOMContentLoaded fn
 
 
 
-/*
-*
-*   script.js file below
-*   ====================
+
+/*·self-exec fn ended.
+‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡
+·······················
+‹····Ô···········Ô····›
+ ·········™◊™·········
+ ·········∞∞∞········
+  ······∏∏∏∏∏∏∏·····
+    ··············
 */
 
 //Event handling
@@ -111,32 +116,32 @@ document.addEventListener('DOMContentLoaded', function(e) {
    //unobstrusive event binding
    document.querySelector('button').
    addEventListener('click', function() {
-
       //call server to get name
       $ajaxUtil
          .sendGetRequest('/name.txt',
             function(request) {
                var name = request.responseText;
-
                document.querySelector('#content')
               .innerHTML = "<h2>Hello " + name + "!";
-            
 
-            });
+            });//fn
 
-      
-
-
-   }); //eventListener
+   }); //click event
 
 
-}); //eventListener
+}); //DOMContentloaded fn
 
 
-/*
-*
-*     index.html
-*     ----------  
+
+
+/*· some index.html
+‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡
+·······················
+‹····Ô···········Ô····›
+ ·········™◊™·········
+ ·········∞∞∞········
+  ······∏∏∏∏∏∏∏·····
+    ··············
 */
 
 
@@ -150,26 +155,27 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </head>
 <body>
    <h1 id="title">ajax test</h1>
-
    <p>
       <button>
          Say hello to someone on the Server!
       </button>
-   </p>
+  </p>
+   <div id="content">&nbsp;</div>
+  
 
-   <div id="content">
-      
-   </div>
-   
 </body>
 </html>
 
 
-/*
-*
-*     data.txt
-*     ----------  
+/*· whatever data file
+‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡
+·······················
+‹····Ô···········Ô····›
+ ·········™◊™·········
+ ·········∞∞∞········
+  ······∏∏∏∏∏∏∏·····
+    ··············
 */
 
-      whatever or stefano
+ >> whatever data or stefano works  //.TXT,JSON,XML
 
