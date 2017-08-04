@@ -16,31 +16,7 @@
 <br />
   
  <kbd>js</kbd> :mag:
- ![js1](images/js1.png)
- 
- <br />
- <hr />  
-<br />
-  
- <kbd>js</kbd> :mag:
- ![js2](images/js2.png)
-
-
-
- <hr />  
-<br />
-  
- <kbd>js</kbd> :mag:
- ![js2](images/js3.png)
-
-
-
-
- <hr />  
-<br />
-  
- <kbd>js</kbd> :mag:
- ![js2](images/js4.png)
+ ![js1](images/jsinheritance.jpg)
  
  
  
