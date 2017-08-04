@@ -8,14 +8,14 @@
 
 
   
- <kbd>js</kbd> :mag:
+ <kbd>js-notes</kbd> :mag:
  <br>
  ![js1](images/JSU.png)
 
-
+                            <kbd>js-inheritance</kbd> :mag:
 <br />
   
- <kbd>js</kbd> :mag:
+ 
  ![js1](images/jsinheritance.jpg)
  
  
