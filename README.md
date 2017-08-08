@@ -13,7 +13,7 @@
  ![js1](images/JSU.png)
  
  <br>
- ![js1](images/javascriptlogo.svg)
+ ![](images/javascriptlogo.svg)
 
 
 <kbd>js-inheritance</kbd> :mag:
