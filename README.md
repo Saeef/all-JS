@@ -16,11 +16,10 @@
  ![js1](images/jstv.jpg)
 
 
-<kbd>js-inheritance</kbd> :mag:
-<br />
+
   
  
- ![js1](images/jsinheritance.jpg)
+
  
  
  
