@@ -13,8 +13,8 @@
  ![js1](images/js.jpg)
  
  
- #asynchronousJavaScript
- A Separate repository but part of all-JS notes (Asynchronous and ES6)
+# asynchronousJavaScript
+A Separate repository but part of all-JS notes (Asynchronous and ES6)
  
 
   
