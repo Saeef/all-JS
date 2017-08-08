@@ -11,6 +11,9 @@
  <kbd>js</kbd> :mag:
  <br>
  ![js1](images/JSU.png)
+ 
+ <br>
+ ![js1](images/javascriptlogo.svg)
 
 
 <kbd>js-inheritance</kbd> :mag:
