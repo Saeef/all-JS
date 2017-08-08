@@ -1,4 +1,4 @@
-## :pear::&nbsp; <kbd>BEST JS NOTES!</kbd> my js notes.   &nbsp;:coffee:  
+## :pear::&nbsp; <kbd>BEST :notebook: NOTES!</kbd> my js notes.   &nbsp;:coffee:  
 > (new notes part of a 5 modules JavaScript course taken online from the University of Chicago, Illinois.)
 
 ## :pear::pear::&nbsp; <kbd>JS</kbd> snippets and other stuff<kbd>LIB</kbd> ongoing.. &nbsp;:rocket:
