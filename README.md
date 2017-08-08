@@ -13,7 +13,7 @@
  ![js1](images/js.jpg)
  
  
-# asynchronousJavaScript
+# asynchronousJavaScript  :checkered_flag:
 <kbd>A Separate :notebook: repository</kbd> but part of all-JS notes (Asynchronous and ES6)
  
 
