@@ -10,10 +10,10 @@
   
  <kbd>js</kbd> :mag:
  <br>
- ![js1](images/JSU.png)
+ ![js1](images/js.jpg)
  
  <br>
- ![](images/javascriptlogo.svg)
+ ![](images/jstv.jpg)
 
 
 <kbd>js-inheritance</kbd> :mag:
