@@ -4,12 +4,7 @@
 ## <kbd>TWO</kbd>:&nbsp; <kbd>JS</kbd> snippets and other stuff<kbd>LIB</kbd> ongoing.. &nbsp;:rocket:
 
 
- <br>
- ![](images/jstv.jpg)
-
-![](eloqJS/images/jstv.jpg)
-
-
+ 
 
 
   
