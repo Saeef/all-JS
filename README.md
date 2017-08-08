@@ -13,7 +13,7 @@
  ![js1](images/js.jpg)
  
  <br>
- ![](images/jstv.jpg)
+ ![js1](images/jstv.jpg)
 
 
 <kbd>js-inheritance</kbd> :mag:
