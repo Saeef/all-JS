@@ -43,10 +43,10 @@
 <kbd>negative row margin</kbd>  &nbsp; :stew:
 ![](images/negativeRowMargin.png)
 
-<hr/>
+<hr/><br/>
 
 <kbd>bootstrap fix</kbd>
-<br/><br/>
+<br/>
 ![](images/bootstrapfix.png)
 
 <br/>
