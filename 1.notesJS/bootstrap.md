@@ -5,7 +5,7 @@
 - Mobile first == plan mobile from the start
   * css framework either yours or bootstrap, should be mobile ready
 
-### bootstrap grid systems basics
+### bootstrap grid systems basics. &nbsp; :hamburger:
 
 ```
   <div class="container">
@@ -33,10 +33,12 @@ or
 
 <hr/>
 
-- bootstrap grid must always be inside of a container wrapper
+### about the grid &nbsp; :rice:
+
+- bootstrap grid must always be inside of a container wrapper. &nbsp; :zap:
 - container class options:
-  + container (pre-determined fixed widths at different breakpoints)
-  + container-fluid. (100% width of the browser and provides consistent padding)
+  + container (pre-determined fixed widths at different breakpoints) &nbsp; :zap:
+  + container-fluid. (100% width of the browser and provides consistent padding) &nbsp; :zap:
 
 - row class creates horizontal groups of columns
   + columns collapse and interact with each other as a group, but independently
@@ -45,7 +47,7 @@ or
     class setup  
 
 
-<kbd>negative row margin</kbd>
+<kbd>negative row margin</kbd>  &nbsp; :stew:
 ![](images/negativeRowMargin.png)
 
 <hr/>
@@ -64,24 +66,23 @@ or
    col-SIZE-SPAN
 ```
 
-#### size: 
+#### size:  &nbsp; :zap:
 - screen width range identifier
 - xs,sm,md,lg
+
 ex:
 
 ```
  if set lg 1200px,other columns below that width will collapse
 
 ```
-#### span
+
+#### span. &nbsp; :zap:
 - how many columns element should span
 - values: 1 through 12
 
 
-
-
-
-
+<br/><br/><hr/>
 
 
 # @media Queries & Responsive Layout
@@ -96,8 +97,10 @@ ex:
     color:blue;
   }
 }
+
 ```
-- each media feature (resolves to true or false)
+
+### each media feature (resolves to true or false). &nbsp; :icecream:
 
 ```
   @media (max-width:800px) {...}
@@ -112,14 +115,14 @@ ex:
 
 ```
 
-## devices with width within a range
+### devices with width within a range. &nbsp; :ram:
 
 ```
  @media (min-width:768px) and (max-width:991px) {...}
 
 ```
 
-## comma between media queries becomes an ***OR***
+## comma between media queries becomes an ***OR***. &nbsp; :dog2:
 
 ```
  /* any device who's width is no larger than 767px or devices who's width no smaller than
@@ -129,7 +132,7 @@ ex:
 
 ```
 
-## Media Query Common Approach
+## Media Query Common Approach. &nbsp; :cat2:
 
 - base styles
 
@@ -153,7 +156,7 @@ ex:
 
 ```
 
-- and media queries
+- and media queries &nbsp; :goat:
 
 ```
 /******************* large devices only ****************/
@@ -171,7 +174,7 @@ ex:
 
 ```
 
-## 12-column Grid Responsive Layout
+## 12-column Grid Responsive Layout &nbsp; :pig:
 
 <kbd>responsive layout grid</kbd>
 
