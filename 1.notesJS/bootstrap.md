@@ -38,7 +38,7 @@
   + columns collapse and interact with each other as a group, but independently
     for columns in another row
   + row also creates a negative margin to counteract the padding that the container
-    class setup  <br/>
+    class setup  <br/><br/>
 
 <kbd>negative row margin</kbd>  &nbsp; :stew:
 ![](images/negativeRowMargin.png)
