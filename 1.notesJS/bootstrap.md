@@ -39,9 +39,7 @@ or
   + columns collapse and interact with each other as a group, but independently
     for columns in another row
   + row also creates a negative margin to counteract the padding that the container
-    class setup  
-
-
+    class setup  <br/>
 
 <kbd>negative row margin</kbd>  &nbsp; :stew:
 ![](images/negativeRowMargin.png)
@@ -52,10 +50,9 @@ or
 <br/>
 ![](images/bootstrapfix.png)
 
-
+<br/>
 
 ### bootstrap columns
-
 - every single column in bootstrap is defined using this template:
 
 ```
@@ -67,19 +64,15 @@ or
 - xs,sm,md,lg
 
 ex:
-
 ```
  if set lg 1200px,other columns below that width will collapse
-
 ```
 
 #### span. &nbsp; :zap:
 - how many columns element should span
 - values: 1 through 12
 
-
 <br/><br/><hr/>
-
 
 # @media Queries & Responsive Layout
 
@@ -93,7 +86,6 @@ ex:
     color:blue;
   }
 }
-
 ```
 
 ### each media feature (resolves to true or false). &nbsp; :icecream:
@@ -115,7 +107,6 @@ ex:
 
 ```
  @media (min-width:768px) and (max-width:991px) {...}
-
 ```
 
 ## comma between media queries becomes an ***OR***. &nbsp; :dog2:
