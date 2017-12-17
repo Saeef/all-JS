@@ -34,7 +34,7 @@
   + container (pre-determined fixed widths at different breakpoints) &nbsp; :zap:
   + container-fluid. (100% width of the browser and provides consistent padding) &nbsp; :zap:
 
-- row class creates horizontal groups of columns
+- row class creates horizontal groups of columns &nbsp; :zap:
   + columns collapse and interact with each other as a group, but independently
     for columns in another row
   + row also creates a negative margin to counteract the padding that the container
