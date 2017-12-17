@@ -52,7 +52,7 @@
 <br/>
 
 ### bootstrap columns &nbsp; :suspect:
-every single column in bootstrap is defined using this template:
+- every single column in bootstrap is defined using this template:
 
 ```
    col-SIZE-SPAN
