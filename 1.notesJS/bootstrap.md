@@ -52,8 +52,8 @@ or
 
 <br/>
 
-### bootstrap columns
-- every single column in bootstrap is defined using this template:
+### bootstrap columns &nbsp; :suspect:
+every single column in bootstrap is defined using this template:
 
 ```
    col-SIZE-SPAN
@@ -65,7 +65,7 @@ or
 
 ex:
 ```
- if set lg 1200px,other columns below that width will collapse
+     if set lg 1200px,other columns below that width will collapse
 ```
 
 #### span. &nbsp; :zap:
@@ -75,7 +75,6 @@ ex:
 <br/><br/><hr/>
 
 # @media Queries & Responsive Layout
-
 ex:
 
 ```
@@ -100,7 +99,6 @@ ex:
   @media screen {...}
 
   @media print {...}
-
 ```
 
 ### devices with width within a range. &nbsp; :ram:
@@ -109,7 +107,7 @@ ex:
  @media (min-width:768px) and (max-width:991px) {...}
 ```
 
-## comma between media queries becomes an ***OR***. &nbsp; :dog2:
+### comma between media queries becomes an ***OR***. &nbsp; :dog2:
 
 ```
  /* any device who's width is no larger than 767px or devices who's width no smaller than
@@ -119,7 +117,7 @@ ex:
 
 ```
 
-## Media Query Common Approach. &nbsp; :cat2:
+### Media Query Common Approach. &nbsp; :cat2:
 
 - base styles
 
@@ -140,7 +138,6 @@ ex:
    width:50px;
    height:50px;
  }
-
 ```
 
 - and media queries &nbsp; :goat:
