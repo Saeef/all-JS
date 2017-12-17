@@ -46,13 +46,13 @@ or
 
 
 <kbd>negative row margin</kbd>
-![](negativeRowMargin.png)
+![](images/negativeRowMargin.png)
 
 <hr/>
 
 <kbd>bootstrap fix</kbd>
 <br/>
-![](bootstrapfix.png)
+![](images/bootstrapfix.png)
 
 
 
@@ -177,7 +177,7 @@ ex:
 
 1 column => 100%/12 = 8.33% * (number of columns)
 
-![](responsivelayout.png)
+![](images/responsivelayout.png)
 
 <br/>
 
@@ -189,7 +189,7 @@ ex:
       6 6   4 4 4   6 6
 ```
 
-![](nestedgrids.png)
+![](images/nestedgrids.png)
 
 
 
