@@ -46,7 +46,7 @@
 <hr/>
 
 <kbd>bootstrap fix</kbd>
-<br/>
+<br/><br/>
 ![](images/bootstrapfix.png)
 
 <br/>
