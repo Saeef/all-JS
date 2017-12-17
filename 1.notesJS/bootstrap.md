@@ -70,50 +70,48 @@ ex:
 #### span. &nbsp; :zap:
 - how many columns element should span
 - values: 1 through 12
-
-<br/><br/><hr/>
+<hr/>
+<br/><br/>
 
 # @media Queries & Responsive Layout
-ex:
 
 ```
-/* Media Query Syntax */
+  ex:
+     /* Media Query Syntax */
 
-@media (max-width:767px) {
-   p {
-    color:blue;
-  }
-}
+     @media (max-width:767px) {
+        p {
+           color:blue;
+        }
+     }
 ```
 
 ### each media feature (resolves to true or false). &nbsp; :icecream:
 
 ```
-  @media (max-width:800px) {...}
+     @media (max-width:800px) {...}
 
-  @media (min-width:800px) {...}
+     @media (min-width:800px) {...}
 
-  @media (orientation: portrait) {...}
+     @media (orientation: portrait) {...}
 
-  @media screen {...}
+     @media screen {...}
 
-  @media print {...}
+     @media print {...}
 ```
 
 ### devices with width within a range. &nbsp; :ram:
 
 ```
- @media (min-width:768px) and (max-width:991px) {...}
+     @media (min-width:768px) and (max-width:991px) {...}
 ```
 
 ### comma between media queries becomes an ***OR***. &nbsp; :dog2:
 
 ```
- /* any device who's width is no larger than 767px or devices who's width no smaller than
-    992px
- */
- @media (max-width: 767px), (min-width:992px) {...}
-
+     /* any device who's width is no larger than 767px or devices who's width no smaller than 992px */
+     
+     @media (max-width: 767px), (min-width:992px) {...}
 ```
 
 ### Media Query Common Approach. &nbsp; :cat2:
@@ -121,39 +119,39 @@ ex:
 - base styles
 
 ```
-/************* base styles *********/
- p1 {color: blue;}
- .container {
-   display:block;
-   background:gray;
-   width:300px;
-   height:300px;
- }
+     /************* base styles *********/
+     p1 {color: blue;}
+     .container {
+         display:block;
+         background:gray;
+         width:300px;
+         height:300px;
+     }
 
- p2 {color: blue;}
- .container {
-   display:block;
-   background:gray;
-   width:50px;
-   height:50px;
- }
+     p2 {color: blue;}
+     .container {
+         display:block;
+         background:gray;
+         width:50px;
+         height:50px;
+     }
 ```
 
 - and media queries &nbsp; :goat:
 
 ```
-/******************* large devices only ****************/
-@media (min-width:1200px) {
- 
- ...
-}
+     /******************* large devices only ****************/
 
-/************* medium devices only **********************/
+     @media (min-width:1200px) {
+     ...
+     }
+     
 
-@media (min-width:992px) and (max-width:1199px) {
- 
- ...
-}
+     /************* medium devices only **********************/
+
+     @media (min-width:992px) and (max-width:1199px) {
+     ...
+     }
 
 ```
 
@@ -163,17 +161,12 @@ ex:
 
 1 column => 100%/12 = 8.33% * (number of columns)
 
+
 ![](images/responsivelayout.png)
 
 <br/>
 
 <kbd>nested grids</kbd>
-
-```
-       4      4      4
-
-      6 6   4 4 4   6 6
-```
 
 ![](images/nestedgrids.png)
 
