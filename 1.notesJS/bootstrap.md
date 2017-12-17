@@ -14,10 +14,9 @@
         ...
     </div>
   </div>
-```
-or 
 
-```
+  or 
+
   <header class="container">
     <nav class="row">
       <div class="col-md-4">Col 1</div>
