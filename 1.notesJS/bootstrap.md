@@ -14,12 +14,8 @@
         ...
     </div>
   </div>
-
-
 ```
-
 or 
-
 
 ```
   <header class="container">
@@ -28,7 +24,6 @@ or
         ...
     </nav>
   </header>
-
 ```
 
 <hr/>
