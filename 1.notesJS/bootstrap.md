@@ -62,9 +62,9 @@
 - screen width range identifier
 - xs,sm,md,lg
 
-ex:
 ```
-     if set lg 1200px,other columns below that width will collapse
+ex:
+    if set lg 1200px,other columns below that width will collapse
 ```
 
 #### span. &nbsp; :zap:
