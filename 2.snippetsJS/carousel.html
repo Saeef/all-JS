@@ -1,0 +1,297 @@
+<!-- basic carousel, mobile first -starting at 320px -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>
+    carousel
+   </title>
+<style>
+* {
+ box-sizing: border-box;
+}
+body {
+ margin:0 .32em;
+ padding:0;
+}
+
+header {
+ background: #e5e5e5;
+
+}
+
+header h1 {
+ text-align: center;
+ padding: 5px 0;
+ color: #424245;
+}
+
+.wrapper {
+ margin:1em 0;
+}
+
+.slicontainer {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width:100%;
+  height: 200px;
+}
+
+.sli {
+  position: absolute;
+  top:0%;
+  left:0%;
+  width:100%;
+  height: auto;
+  display: none;
+  opacity: .4;
+
+}
+
+.sli.active {
+  display: block;
+  opacity: 1;
+  animation-name: fade;
+  animation-duration: 1.25s;
+
+  
+}
+
+@keyframes fade {
+ 0% {
+   opacity: .4;
+   display: none;
+ }
+ 100% {
+   opacity: 1;
+   display: block;
+ }
+
+}
+
+.sli .slinum {
+ position: absolute;
+ top:5%;
+ left:2.5%;
+ color: #fafafa;
+ letter-spacing: 1px;
+ text-shadow: 0px 0px 1px rgba(0,0,0,.5);
+ font-size: 14px;
+ line-height: 20px;
+}
+
+.sli .slicap {
+ position: absolute;
+ bottom:5%;
+ color: #fafafa;
+ letter-spacing: .5px;
+ width: 100%;
+ text-align: center;
+ text-shadow: 0px 0px 1px rgba(0,0,0,.5);
+ font-size: 14px;
+ line-height: 20px;
+}
+
+.sli img {
+   display: block;
+   width:100%;
+   max-height: 200px;
+ 
+}
+
+.slicontainer .sliarrows {
+ position: relative;
+ color:white;
+ top:40%;
+}
+
+.sliarrows a.prev, .sliarrows a.next {
+  width: 30px;
+  height: 40px;
+  display: inline-block;
+}
+
+.sliarrows a.prev {
+  position: absolute;
+  left:1%;
+}
+
+.sliarrows a.next {
+  position: absolute;
+  left: 90%;
+}
+
+.sliarrows a.prev:hover, .sliarrows a.next:hover {
+  opacity: 1;
+}
+
+.sliarrows a.prev::after {
+ content: '<';
+ font-size: 32px;
+ line-height: 36px;
+ vertical-align: middle;
+ background-color: rgba(0,0,0,.15);
+ padding:0 5px;
+ cursor: pointer;
+ opacity: .65;
+}
+
+.sliarrows a.next::after {
+ content: '>';
+ font-size: 32px;
+ line-height: 36px;
+ vertical-align: middle;
+ background-color: rgba(0,0,0,.15);
+ padding:0 5px;
+ cursor: pointer;
+ opacity: .65;
+}
+
+@media screen and (min-width: 568px) and (orientation:landscape) {
+
+  .sli img {
+    max-width: 560px;
+    margin:0 auto;
+    max-height: 226px;
+  }
+  .slicontainer {
+    height: 226px;
+  }
+
+  .sli .slinum {left:3.5%;}
+
+  .sliarrows a.prev { left:2.5%; }
+  .sliarrows a.next {left:92.5%; }
+}
+
+</style>   
+</head>
+<body>
+ <header>
+  <h1>Carousel</h1>
+ </header>
+ <div class="wrapper">
+  <div class="slicontainer">
+   
+   
+   <div class="sli">
+    <div class="slinum">1/6
+    </div>
+    <img src="images/slide1.jpg" alt="slide1">
+    <div class="slicap">caption 1 text
+    </div><!-- endof slicap -->
+
+   </div><!-- endof sli -->
+
+   <div class="sli">
+    <div class="slinum">2/6
+    </div>
+    <img src="images/slide2.jpg" alt="slide2">
+    <div class="slicap">caption 2 text
+    </div><!-- endof slicap -->
+
+   </div><!-- endof sli -->
+
+   <div class="sli">
+    <div class="slinum">3/6
+    </div>
+    <img src="images/slide3.jpg" alt="slide3">
+    <div class="slicap">caption 3 text
+    </div><!-- endof slicap -->
+
+   </div><!-- endof sli -->
+
+   <div class="sli">
+    <div class="slinum">4/5
+    </div>
+    <img src="images/slide4.jpg" alt="slide4">
+    <div class="slicap">caption 4 text
+    </div><!-- endof slicap -->
+
+   </div><!-- endof sli -->
+
+   <div class="sli">
+    <div class="slinum">5/5
+    </div>
+    <img src="images/slide5.jpg" alt="slide5">
+    <div class="slicap">caption 5 text
+    </div><!-- endof slicap -->
+
+   </div><!-- endof sli -->
+
+   <div class="sli">
+    <div class="slinum">6/6
+    </div>
+    <img src="images/slide6.jpg" alt="slide6">
+    <div class="slicap">caption 6 text
+    </div><!-- endof slicap -->
+
+   </div><!-- endof sli -->
+
+  <div class="sliarrows">
+    <a class="prev" onclick="movesli(-1)"></a>
+
+    <a class="next" onclick="movesli(1)"></a>
+
+  </div> 
+  <!-- endof sliarrows -->
+  </div>
+  <!-- endof slicontainer -->
+ </div>
+ <!-- endofwrapper -->
+<script type="text/javascript">
+var inx = 1;
+showSlis(inx);
+
+function movesli(n) {
+  showSlis(inx += n);
+
+}
+
+
+function showSlis(n) {
+
+ //slides
+ var s = document.querySelectorAll('.sli img');
+ //if last one
+ if(n > s.length) {
+  inx = 1;
+ }
+ //if first
+ if(n < 1) {
+  inx = s.length;
+ }
+
+ //hide all slides
+ for(var i=0; i < s.length; i++) {
+  s[i].style.display = "none";
+  s[i].parentElement.className = "sli";
+ }//for
+
+ //ex:6[1-1=0]..
+ s[inx - 1].style.display = "block";
+ //add class active
+ document.querySelectorAll('.sli')[inx-1].className = "sli active";
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
