@@ -144,3 +144,10 @@
  ![toggleJQuery](images/orangeClock.png)
  
  
+  <hr />  
+<br />
+  
+ <kbd>basic carousel</kbd> :mag:
+ ![](images/carousel.png)
+ 
+ 
