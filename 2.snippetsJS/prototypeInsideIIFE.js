@@ -23,7 +23,7 @@
     Person.prototype.getFullName = function(){
         var isthis = this;
         var nested = function() {
-            var fnname = isthis.first + " " + isthis.last;
+            var fname = isthis.first + " " + isthis.last;
             console.log(fname);
         
         };//nested
